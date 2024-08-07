@@ -1,10 +1,10 @@
 {
   "name": "tauri-plugin-pinia",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "description": "Persistent Pinia stores for Tauri",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.7.0",
   "homepage": "https://github.com/ferreira-tb/tauri-plugin-pinia",
   "repository": {
     "type": "git",
@@ -43,10 +43,10 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.0.0-beta.15",
-    "@tb-dev/utils": "^2.0.3",
+    "@tauri-apps/api": "^2.0.0-rc.0",
+    "@tb-dev/utils": "^2.1.0",
     "@vueuse/core": "^10.11.0",
-    "pinia": "^2.2.0",
-    "vue": "^3.4.34"
+    "pinia": "^2.2.1",
+    "vue": "^3.4.36"
   }
 }

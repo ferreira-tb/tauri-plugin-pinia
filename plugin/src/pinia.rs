@@ -176,6 +176,7 @@ impl<R: Runtime> Pinia<R> {
   pub fn clear_autosave(&self) {
     let mut guard = self.autosave.lock().unwrap();
     if let Some(autosave) = guard.take() {
+      drop(guard);
       autosave.abort();
 
       #[cfg(feature = "tracing")]

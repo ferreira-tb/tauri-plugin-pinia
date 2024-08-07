@@ -14,7 +14,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! tauri-plugin-pinia = 0.3
+//! tauri-plugin-pinia = 0.4
 //! ```
 //!
 //! Install the JavaScript package with your preferred package manager:
@@ -35,7 +35,7 @@
 //! {
 //!   "identifier": "pinia",
 //!   "windows": ["*"],
-//!   "permissions": ["pinia:default", "event:default"]
+//!   "permissions": ["pinia:default", "core:event:default"]
 //! }
 //! ```
 //!
