@@ -270,7 +270,6 @@ impl Builder {
     self
       .sync_denylist
       .extend(denylist.iter().map(ToString::to_string));
-
     self
   }
 
