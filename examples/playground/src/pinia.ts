@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-top-level-side-effects */
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
 

@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-top-level-side-effects */
 import { createStore } from '@tauri-store/vue/src/index.js';
 
 export const vueStore = createStore(

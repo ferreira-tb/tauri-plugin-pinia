@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-top-level-side-effects */
 import { open } from '@tauri-apps/plugin-shell';
 import { store as valtio } from '@tauri-store/valtio/src/index.js';
 

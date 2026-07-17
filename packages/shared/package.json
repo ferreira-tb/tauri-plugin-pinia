@@ -1,10 +1,10 @@
 {
   "name": "@tauri-store/shared",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "description": "Utilities for Tauri Store",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@11.8.0",
+  "packageManager": "pnpm@11.13.1",
   "homepage": "https://tb.dev.br/tauri-store",
   "license": "MIT",
   "funding": "https://github.com/sponsors/ferreira-tb",
@@ -46,6 +46,6 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^2.8.0",
-    "es-toolkit": "^1.47.1"
+    "es-toolkit": "^1.49.0"
   }
 }

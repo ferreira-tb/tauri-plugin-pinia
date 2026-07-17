@@ -43,6 +43,9 @@ export default defineConfig({
       'no-non-null-assertion': 'off',
       'use-unknown-in-catch-callback-variable': 'off',
     },
+    unicorn: {
+      'no-asterisk-prefix-in-documentation-comments': 'off',
+    },
     vue: {
       'enforce-style-attribute': 'off',
       'v-on-handler-style': 'off',
