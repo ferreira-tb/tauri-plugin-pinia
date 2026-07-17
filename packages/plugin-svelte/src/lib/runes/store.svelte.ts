@@ -104,6 +104,8 @@ export class RuneStore<S extends State> extends BaseStore<S> implements TauriSto
     const effectFn = () => {
       // Effects depend only on the values they read during their last run.
       // Taking the snapshot immediately ensures that `state` is always captured.
+      //
+      // eslint-disable-next-line unicorn/no-declarations-before-early-exit
       const snapshot = $state.snapshot(this.state) as S;
       if (isFirstCall) {
         isFirstCall = false;

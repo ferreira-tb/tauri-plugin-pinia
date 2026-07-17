@@ -12,6 +12,12 @@ outline: 2
 
 _Nothing yet._
 
+## 5.0.0
+
+### Breaking Changes
+
+- Update `pinia` to `4.0.2`.
+
 ## 4.2.1
 
 ### Dependencies

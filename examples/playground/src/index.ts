@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-global-object-property-assignment */
 import App from './App.vue';
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';

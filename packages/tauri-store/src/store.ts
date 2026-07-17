@@ -83,6 +83,7 @@ export class Store<S extends State> extends BaseStore<S> implements TauriStoreCo
 
     let isFirstCall = true;
     const subscribeFn = () => {
+      // eslint-disable-next-line unicorn/no-declarations-before-early-exit
       const state = this.signal();
       if (isFirstCall) {
         isFirstCall = false;
