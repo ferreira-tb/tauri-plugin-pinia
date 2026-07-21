@@ -31,7 +31,7 @@ minimumReleaseAgeStrict: true
 minimumReleaseAgeExclude:
   - '@tb-dev/*'
   - '@tsukilabs/*'
-  - '@sveltejs/kit@2.70.0'
+  - prettier@3.9.6
 
 overrides:
   ajv@>=7.0.0-alpha.0 <8.18.0: '>=8.18.0'
