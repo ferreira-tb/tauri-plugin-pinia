@@ -7,63 +7,63 @@
 // upstream `tauri-store` crate or update the code generation itself.
 // This ensures that all plugins maintain consistent behavior.
 
-import { commands } from '@tauri-store/shared';
+import { commands } from "@tauri-store/shared";
 
 /**
  * Removes one or more stores from the save denylist.
  */
-export const allowSave = commands.allowSave('pinia');
+export const allowSave = commands.allowSave("pinia");
 
 /**
  * Removes one or more stores from the sync denylist.
  */
-export const allowSync = commands.allowSync('pinia');
+export const allowSync = commands.allowSync("pinia");
 
 /**
  * Stops the autosave.
  */
-export const clearAutosave = commands.clearAutosave('pinia');
+export const clearAutosave = commands.clearAutosave("pinia");
 
 /**
  * Adds one or more stores to the save denylist.
  */
-export const denySave = commands.denySave('pinia');
+export const denySave = commands.denySave("pinia");
 
 /**
  * Adds one or more stores to the sync denylist.
  */
-export const denySync = commands.denySync('pinia');
+export const denySync = commands.denySync("pinia");
 
 /**
  * Gets the default save strategy for the stores.
  * It can be overridden on a per-store basis.
  */
-export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy('pinia');
+export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy("pinia");
 
 /**
  * Directory where the stores are saved.
  */
-export const getStoreCollectionPath = commands.getStoreCollectionPath('pinia');
+export const getStoreCollectionPath = commands.getStoreCollectionPath("pinia");
 
 /**
  * Gets the save strategy used by a store.
  **/
-export const getSaveStrategy = commands.getSaveStrategy('pinia');
+export const getSaveStrategy = commands.getSaveStrategy("pinia");
 
 /**
  * Lists all the store ids.
  */
-export const getStoreIds = commands.getStoreIds('pinia');
+export const getStoreIds = commands.getStoreIds("pinia");
 
 /**
  * Path where the store is saved.
  **/
-export const getStorePath = commands.getStorePath('pinia');
+export const getStorePath = commands.getStorePath("pinia");
 
 /**
  * Gets the state of a store.
  */
-export const getStoreState = commands.getStoreState('pinia');
+export const getStoreState = commands.getStoreState("pinia");
 
 /**
  * Saves a store to the disk.
@@ -79,17 +79,17 @@ export const getStoreState = commands.getStoreState('pinia');
  * await save('my-store', 'my-store-2');
  * ```
  **/
-export const save = commands.save('pinia');
+export const save = commands.save("pinia");
 
 /**
  * Saves all the stores to the disk.
  */
-export const saveAll = commands.saveAll('pinia');
+export const saveAll = commands.saveAll("pinia");
 
 /**
  * Saves all the stores to the disk immediately, ignoring the save strategy.
  */
-export const saveAllNow = commands.saveAllNow('pinia');
+export const saveAllNow = commands.saveAllNow("pinia");
 
 /**
  * Saves a store to the disk immediately, ignoring the save strategy.
@@ -105,7 +105,7 @@ export const saveAllNow = commands.saveAllNow('pinia');
  * await saveNow('my-store', 'my-store-2');
  * ```
  */
-export const saveNow = commands.saveNow('pinia');
+export const saveNow = commands.saveNow("pinia");
 
 /**
  * Saves the stores periodically.
@@ -119,7 +119,7 @@ export const saveNow = commands.saveNow('pinia');
  * await setAutosave(5 * 60 * 1000);
  * ```
  */
-export const setAutosave = commands.setAutosave('pinia');
+export const setAutosave = commands.setAutosave("pinia");
 
 /**
  * Sets the save strategy for a store.
@@ -132,7 +132,7 @@ export const setAutosave = commands.setAutosave('pinia');
  * await setSaveStrategy('my-store', 'debounce', 1000);
  * ```
  */
-export const setSaveStrategy = commands.setSaveStrategy('pinia');
+export const setSaveStrategy = commands.setSaveStrategy("pinia");
 
 /**
  * Sets the store options.
@@ -148,20 +148,20 @@ export const setSaveStrategy = commands.setSaveStrategy('pinia');
  * });
  * ```
  */
-export const setStoreOptions = commands.setStoreOptions('pinia');
+export const setStoreOptions = commands.setStoreOptions("pinia");
 
 /////////////////////////
 // INTERNAL COMMANDS
 /////////////////////////
 
 /** @internal */
-export const destroy = commands.destroy('pinia');
+export const destroy = commands.destroy("pinia");
 
 /** @internal */
-export const load = commands.load('pinia');
+export const load = commands.load("pinia");
 
 /** @internal */
-export const patch = commands.patch('pinia');
+export const patch = commands.patch("pinia");
 
 /** @internal */
-export const unload = commands.unload('pinia');
+export const unload = commands.unload("pinia");

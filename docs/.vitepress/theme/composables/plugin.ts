@@ -1,11 +1,11 @@
-import { inBrowser, useRoute, useRouter } from 'vitepress';
-import { computed, effectScope, readonly, ref, watchEffect } from 'vue';
-import { JavaScript, Pinia, React, Svelte, Vue } from '../components/icon';
+import { inBrowser, useRoute, useRouter } from "vitepress";
+import { computed, effectScope, readonly, ref, watchEffect } from "vue";
+import { JavaScript, Pinia, React, Svelte, Vue } from "../components/icon";
 
 const PATH_REGEX = /^\/?tauri-store\/plugin-(.+?)\//;
 
 export function useCurrentPlugin() {
-  const plugin = ref<PluginName>('tauri-store');
+  const plugin = ref<PluginName>("tauri-store");
   const icon = computed(() => resolveIcon(plugin.value));
 
   if (inBrowser) {
@@ -39,21 +39,21 @@ export function useCurrentPlugin() {
 function parsePluginName(path: string) {
   let match = PATH_REGEX.exec(path)?.at(1);
   match &&= `@tauri-store/${match}`;
-  return (match ?? 'tauri-store') as PluginName;
+  return (match ?? "tauri-store") as PluginName;
 }
 
 function resolveIcon(plugin: PluginName) {
   switch (plugin) {
-    case '@tauri-store/pinia':
+    case "@tauri-store/pinia":
       return Pinia;
-    case '@tauri-store/svelte':
+    case "@tauri-store/svelte":
       return Svelte;
-    case '@tauri-store/valtio':
-    case '@tauri-store/zustand':
+    case "@tauri-store/valtio":
+    case "@tauri-store/zustand":
       return React;
-    case '@tauri-store/vue':
+    case "@tauri-store/vue":
       return Vue;
-    case 'tauri-store':
+    case "tauri-store":
     default:
       return JavaScript;
   }

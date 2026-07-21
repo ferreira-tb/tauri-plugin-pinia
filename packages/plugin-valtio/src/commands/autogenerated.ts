@@ -7,63 +7,63 @@
 // upstream `tauri-store` crate or update the code generation itself.
 // This ensures that all plugins maintain consistent behavior.
 
-import { commands } from '@tauri-store/shared';
+import { commands } from "@tauri-store/shared";
 
 /**
  * Removes one or more stores from the save denylist.
  */
-export const allowSave = commands.allowSave('valtio');
+export const allowSave = commands.allowSave("valtio");
 
 /**
  * Removes one or more stores from the sync denylist.
  */
-export const allowSync = commands.allowSync('valtio');
+export const allowSync = commands.allowSync("valtio");
 
 /**
  * Stops the autosave.
  */
-export const clearAutosave = commands.clearAutosave('valtio');
+export const clearAutosave = commands.clearAutosave("valtio");
 
 /**
  * Adds one or more stores to the save denylist.
  */
-export const denySave = commands.denySave('valtio');
+export const denySave = commands.denySave("valtio");
 
 /**
  * Adds one or more stores to the sync denylist.
  */
-export const denySync = commands.denySync('valtio');
+export const denySync = commands.denySync("valtio");
 
 /**
  * Gets the default save strategy for the stores.
  * It can be overridden on a per-store basis.
  */
-export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy('valtio');
+export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy("valtio");
 
 /**
  * Directory where the stores are saved.
  */
-export const getStoreCollectionPath = commands.getStoreCollectionPath('valtio');
+export const getStoreCollectionPath = commands.getStoreCollectionPath("valtio");
 
 /**
  * Gets the save strategy used by a store.
  **/
-export const getSaveStrategy = commands.getSaveStrategy('valtio');
+export const getSaveStrategy = commands.getSaveStrategy("valtio");
 
 /**
  * Lists all the store ids.
  */
-export const getStoreIds = commands.getStoreIds('valtio');
+export const getStoreIds = commands.getStoreIds("valtio");
 
 /**
  * Path where the store is saved.
  **/
-export const getStorePath = commands.getStorePath('valtio');
+export const getStorePath = commands.getStorePath("valtio");
 
 /**
  * Gets the state of a store.
  */
-export const getStoreState = commands.getStoreState('valtio');
+export const getStoreState = commands.getStoreState("valtio");
 
 /**
  * Saves a store to the disk.
@@ -79,17 +79,17 @@ export const getStoreState = commands.getStoreState('valtio');
  * await save('my-store', 'my-store-2');
  * ```
  **/
-export const save = commands.save('valtio');
+export const save = commands.save("valtio");
 
 /**
  * Saves all the stores to the disk.
  */
-export const saveAll = commands.saveAll('valtio');
+export const saveAll = commands.saveAll("valtio");
 
 /**
  * Saves all the stores to the disk immediately, ignoring the save strategy.
  */
-export const saveAllNow = commands.saveAllNow('valtio');
+export const saveAllNow = commands.saveAllNow("valtio");
 
 /**
  * Saves a store to the disk immediately, ignoring the save strategy.
@@ -105,7 +105,7 @@ export const saveAllNow = commands.saveAllNow('valtio');
  * await saveNow('my-store', 'my-store-2');
  * ```
  */
-export const saveNow = commands.saveNow('valtio');
+export const saveNow = commands.saveNow("valtio");
 
 /**
  * Saves the stores periodically.
@@ -119,7 +119,7 @@ export const saveNow = commands.saveNow('valtio');
  * await setAutosave(5 * 60 * 1000);
  * ```
  */
-export const setAutosave = commands.setAutosave('valtio');
+export const setAutosave = commands.setAutosave("valtio");
 
 /**
  * Sets the save strategy for a store.
@@ -132,7 +132,7 @@ export const setAutosave = commands.setAutosave('valtio');
  * await setSaveStrategy('my-store', 'debounce', 1000);
  * ```
  */
-export const setSaveStrategy = commands.setSaveStrategy('valtio');
+export const setSaveStrategy = commands.setSaveStrategy("valtio");
 
 /**
  * Sets the store options.
@@ -148,20 +148,20 @@ export const setSaveStrategy = commands.setSaveStrategy('valtio');
  * });
  * ```
  */
-export const setStoreOptions = commands.setStoreOptions('valtio');
+export const setStoreOptions = commands.setStoreOptions("valtio");
 
 /////////////////////////
 // INTERNAL COMMANDS
 /////////////////////////
 
 /** @internal */
-export const destroy = commands.destroy('valtio');
+export const destroy = commands.destroy("valtio");
 
 /** @internal */
-export const load = commands.load('valtio');
+export const load = commands.load("valtio");
 
 /** @internal */
-export const patch = commands.patch('valtio');
+export const patch = commands.patch("valtio");
 
 /** @internal */
-export const unload = commands.unload('valtio');
+export const unload = commands.unload("valtio");

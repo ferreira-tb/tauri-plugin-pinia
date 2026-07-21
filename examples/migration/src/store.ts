@@ -1,4 +1,4 @@
-import { Store } from 'tauri-store/src/index.js';
+import { Store } from "tauri-store/src/index.js";
 
 export type State = {
   counter: number;
@@ -10,10 +10,10 @@ const initialState: State = {
   version: 0,
 };
 
-export const store = new Store('my-store', initialState);
+export const store = new Store("my-store", initialState);
 
-if (!Object.hasOwn(window, '$store')) {
-  Object.defineProperty(window, '$store', {
+if (!Object.hasOwn(window, "$store")) {
+  Object.defineProperty(window, "$store", {
     value: store,
     writable: false,
     configurable: false,

@@ -1,8 +1,8 @@
-import { Store } from './store';
-import * as commands from './commands';
-import type { PiniaPluginContext } from 'pinia';
-import type { TauriPluginPiniaOptions } from './types';
-import type { TauriStoreContract } from '@tauri-store/shared';
+import { Store } from "./store";
+import * as commands from "./commands";
+import type { PiniaPluginContext } from "pinia";
+import type { TauriPluginPiniaOptions } from "./types";
+import type { TauriStoreContract } from "@tauri-store/shared";
 
 /**
  * Creates the Pinia plugin.

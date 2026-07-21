@@ -1,7 +1,7 @@
-import type { Option } from './types';
-import { parseBigInt } from './utils';
+import type { Option } from "./types";
+import { parseBigInt } from "./utils";
 
-export type TimeStrategyKind = 'debounce' | 'throttle' | 'immediate';
+export type TimeStrategyKind = "debounce" | "throttle" | "immediate";
 
 export type LooseTimeStrategyKind = Option<TimeStrategyKind | number>;
 
@@ -20,7 +20,7 @@ export class TimeStrategy {
       if (isValidInterval(strategy)) {
         this.interval = strategy;
       } else {
-        this.strategy = 'immediate';
+        this.strategy = "immediate";
       }
     }
   }
@@ -44,15 +44,15 @@ export class TimeStrategy {
 }
 
 function toStrategyKind(strategy: LooseTimeStrategyKind): TimeStrategyKind {
-  if (typeof strategy === 'string') {
+  if (typeof strategy === "string") {
     return strategy;
   } else if (isValidInterval(strategy)) {
-    return 'debounce';
+    return "debounce";
   }
 
-  return 'immediate';
+  return "immediate";
 }
 
 export function isValidInterval(interval: unknown): interval is number {
-  return typeof interval === 'number' && Number.isFinite(interval) && interval > 0;
+  return typeof interval === "number" && Number.isFinite(interval) && interval > 0;
 }

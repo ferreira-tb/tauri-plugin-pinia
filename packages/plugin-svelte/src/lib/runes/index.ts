@@ -1,1 +1,1 @@
-export { RuneStore, runeStore } from './store.svelte.js';
+export { RuneStore, runeStore } from "./store.svelte.js";

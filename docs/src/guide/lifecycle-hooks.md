@@ -11,10 +11,10 @@ description: Lifecycle hooks
 JavaScript hooks can be registered using the [StoreHooks](https://tb.dev.br/tauri-store/js-docs/tauri-store/interfaces/StoreHooks.html) option.
 
 ```typescript
-import { store } from 'tauri-store';
+import { store } from "tauri-store";
 
 const value = { counter: 0 };
-const counterStore = store('counter', value, {
+const counterStore = store("counter", value, {
   hooks: {
     error: (err) => console.error(err),
     beforeBackendSync: (state) => {
@@ -33,7 +33,7 @@ Registers a hook to be called before a store sends its state to Rust. This can b
 const hooks: StoreHooks = {
   beforeBackendSync: (state) => {
     state.foo = null;
-    state.nested.bar.baz = 'qux';
+    state.nested.bar.baz = "qux";
     return state;
   },
 };

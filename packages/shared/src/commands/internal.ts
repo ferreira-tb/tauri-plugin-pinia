@@ -1,5 +1,5 @@
-import { invoke } from '@tauri-apps/api/core';
-import type { State, TauriStoreContract } from '../types';
+import { invoke } from "@tauri-apps/api/core";
+import type { State, TauriStoreContract } from "../types";
 
 /**
  * Destroys the store.

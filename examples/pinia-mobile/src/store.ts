@@ -1,12 +1,12 @@
-import { ref } from 'vue';
-import { defineStore } from 'pinia';
+import { ref } from "vue";
+import { defineStore } from "pinia";
 
 type Counter = {
   counter: number;
 };
 
 function store() {
-  const counter = ref<Counter['counter']>(0);
+  const counter = ref<Counter["counter"]>(0);
 
   function increment() {
     counter.value++;
@@ -18,4 +18,4 @@ function store() {
   };
 }
 
-export const useStore = defineStore('counter-store', store);
+export const useStore = defineStore("counter-store", store);

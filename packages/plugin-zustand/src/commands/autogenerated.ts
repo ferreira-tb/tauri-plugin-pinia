@@ -7,63 +7,63 @@
 // upstream `tauri-store` crate or update the code generation itself.
 // This ensures that all plugins maintain consistent behavior.
 
-import { commands } from '@tauri-store/shared';
+import { commands } from "@tauri-store/shared";
 
 /**
  * Removes one or more stores from the save denylist.
  */
-export const allowSave = commands.allowSave('zustand');
+export const allowSave = commands.allowSave("zustand");
 
 /**
  * Removes one or more stores from the sync denylist.
  */
-export const allowSync = commands.allowSync('zustand');
+export const allowSync = commands.allowSync("zustand");
 
 /**
  * Stops the autosave.
  */
-export const clearAutosave = commands.clearAutosave('zustand');
+export const clearAutosave = commands.clearAutosave("zustand");
 
 /**
  * Adds one or more stores to the save denylist.
  */
-export const denySave = commands.denySave('zustand');
+export const denySave = commands.denySave("zustand");
 
 /**
  * Adds one or more stores to the sync denylist.
  */
-export const denySync = commands.denySync('zustand');
+export const denySync = commands.denySync("zustand");
 
 /**
  * Gets the default save strategy for the stores.
  * It can be overridden on a per-store basis.
  */
-export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy('zustand');
+export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy("zustand");
 
 /**
  * Directory where the stores are saved.
  */
-export const getStoreCollectionPath = commands.getStoreCollectionPath('zustand');
+export const getStoreCollectionPath = commands.getStoreCollectionPath("zustand");
 
 /**
  * Gets the save strategy used by a store.
  **/
-export const getSaveStrategy = commands.getSaveStrategy('zustand');
+export const getSaveStrategy = commands.getSaveStrategy("zustand");
 
 /**
  * Lists all the store ids.
  */
-export const getStoreIds = commands.getStoreIds('zustand');
+export const getStoreIds = commands.getStoreIds("zustand");
 
 /**
  * Path where the store is saved.
  **/
-export const getStorePath = commands.getStorePath('zustand');
+export const getStorePath = commands.getStorePath("zustand");
 
 /**
  * Gets the state of a store.
  */
-export const getStoreState = commands.getStoreState('zustand');
+export const getStoreState = commands.getStoreState("zustand");
 
 /**
  * Saves a store to the disk.
@@ -79,17 +79,17 @@ export const getStoreState = commands.getStoreState('zustand');
  * await save('my-store', 'my-store-2');
  * ```
  **/
-export const save = commands.save('zustand');
+export const save = commands.save("zustand");
 
 /**
  * Saves all the stores to the disk.
  */
-export const saveAll = commands.saveAll('zustand');
+export const saveAll = commands.saveAll("zustand");
 
 /**
  * Saves all the stores to the disk immediately, ignoring the save strategy.
  */
-export const saveAllNow = commands.saveAllNow('zustand');
+export const saveAllNow = commands.saveAllNow("zustand");
 
 /**
  * Saves a store to the disk immediately, ignoring the save strategy.
@@ -105,7 +105,7 @@ export const saveAllNow = commands.saveAllNow('zustand');
  * await saveNow('my-store', 'my-store-2');
  * ```
  */
-export const saveNow = commands.saveNow('zustand');
+export const saveNow = commands.saveNow("zustand");
 
 /**
  * Saves the stores periodically.
@@ -119,7 +119,7 @@ export const saveNow = commands.saveNow('zustand');
  * await setAutosave(5 * 60 * 1000);
  * ```
  */
-export const setAutosave = commands.setAutosave('zustand');
+export const setAutosave = commands.setAutosave("zustand");
 
 /**
  * Sets the save strategy for a store.
@@ -132,7 +132,7 @@ export const setAutosave = commands.setAutosave('zustand');
  * await setSaveStrategy('my-store', 'debounce', 1000);
  * ```
  */
-export const setSaveStrategy = commands.setSaveStrategy('zustand');
+export const setSaveStrategy = commands.setSaveStrategy("zustand");
 
 /**
  * Sets the store options.
@@ -148,20 +148,20 @@ export const setSaveStrategy = commands.setSaveStrategy('zustand');
  * });
  * ```
  */
-export const setStoreOptions = commands.setStoreOptions('zustand');
+export const setStoreOptions = commands.setStoreOptions("zustand");
 
 /////////////////////////
 // INTERNAL COMMANDS
 /////////////////////////
 
 /** @internal */
-export const destroy = commands.destroy('zustand');
+export const destroy = commands.destroy("zustand");
 
 /** @internal */
-export const load = commands.load('zustand');
+export const load = commands.load("zustand");
 
 /** @internal */
-export const patch = commands.patch('zustand');
+export const patch = commands.patch("zustand");
 
 /** @internal */
-export const unload = commands.unload('zustand');
+export const unload = commands.unload("zustand");

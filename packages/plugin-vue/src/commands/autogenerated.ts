@@ -7,63 +7,63 @@
 // upstream `tauri-store` crate or update the code generation itself.
 // This ensures that all plugins maintain consistent behavior.
 
-import { commands } from '@tauri-store/shared';
+import { commands } from "@tauri-store/shared";
 
 /**
  * Removes one or more stores from the save denylist.
  */
-export const allowSave = commands.allowSave('vue');
+export const allowSave = commands.allowSave("vue");
 
 /**
  * Removes one or more stores from the sync denylist.
  */
-export const allowSync = commands.allowSync('vue');
+export const allowSync = commands.allowSync("vue");
 
 /**
  * Stops the autosave.
  */
-export const clearAutosave = commands.clearAutosave('vue');
+export const clearAutosave = commands.clearAutosave("vue");
 
 /**
  * Adds one or more stores to the save denylist.
  */
-export const denySave = commands.denySave('vue');
+export const denySave = commands.denySave("vue");
 
 /**
  * Adds one or more stores to the sync denylist.
  */
-export const denySync = commands.denySync('vue');
+export const denySync = commands.denySync("vue");
 
 /**
  * Gets the default save strategy for the stores.
  * It can be overridden on a per-store basis.
  */
-export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy('vue');
+export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy("vue");
 
 /**
  * Directory where the stores are saved.
  */
-export const getStoreCollectionPath = commands.getStoreCollectionPath('vue');
+export const getStoreCollectionPath = commands.getStoreCollectionPath("vue");
 
 /**
  * Gets the save strategy used by a store.
  **/
-export const getSaveStrategy = commands.getSaveStrategy('vue');
+export const getSaveStrategy = commands.getSaveStrategy("vue");
 
 /**
  * Lists all the store ids.
  */
-export const getStoreIds = commands.getStoreIds('vue');
+export const getStoreIds = commands.getStoreIds("vue");
 
 /**
  * Path where the store is saved.
  **/
-export const getStorePath = commands.getStorePath('vue');
+export const getStorePath = commands.getStorePath("vue");
 
 /**
  * Gets the state of a store.
  */
-export const getStoreState = commands.getStoreState('vue');
+export const getStoreState = commands.getStoreState("vue");
 
 /**
  * Saves a store to the disk.
@@ -79,17 +79,17 @@ export const getStoreState = commands.getStoreState('vue');
  * await save('my-store', 'my-store-2');
  * ```
  **/
-export const save = commands.save('vue');
+export const save = commands.save("vue");
 
 /**
  * Saves all the stores to the disk.
  */
-export const saveAll = commands.saveAll('vue');
+export const saveAll = commands.saveAll("vue");
 
 /**
  * Saves all the stores to the disk immediately, ignoring the save strategy.
  */
-export const saveAllNow = commands.saveAllNow('vue');
+export const saveAllNow = commands.saveAllNow("vue");
 
 /**
  * Saves a store to the disk immediately, ignoring the save strategy.
@@ -105,7 +105,7 @@ export const saveAllNow = commands.saveAllNow('vue');
  * await saveNow('my-store', 'my-store-2');
  * ```
  */
-export const saveNow = commands.saveNow('vue');
+export const saveNow = commands.saveNow("vue");
 
 /**
  * Saves the stores periodically.
@@ -119,7 +119,7 @@ export const saveNow = commands.saveNow('vue');
  * await setAutosave(5 * 60 * 1000);
  * ```
  */
-export const setAutosave = commands.setAutosave('vue');
+export const setAutosave = commands.setAutosave("vue");
 
 /**
  * Sets the save strategy for a store.
@@ -132,7 +132,7 @@ export const setAutosave = commands.setAutosave('vue');
  * await setSaveStrategy('my-store', 'debounce', 1000);
  * ```
  */
-export const setSaveStrategy = commands.setSaveStrategy('vue');
+export const setSaveStrategy = commands.setSaveStrategy("vue");
 
 /**
  * Sets the store options.
@@ -148,20 +148,20 @@ export const setSaveStrategy = commands.setSaveStrategy('vue');
  * });
  * ```
  */
-export const setStoreOptions = commands.setStoreOptions('vue');
+export const setStoreOptions = commands.setStoreOptions("vue");
 
 /////////////////////////
 // INTERNAL COMMANDS
 /////////////////////////
 
 /** @internal */
-export const destroy = commands.destroy('vue');
+export const destroy = commands.destroy("vue");
 
 /** @internal */
-export const load = commands.load('vue');
+export const load = commands.load("vue");
 
 /** @internal */
-export const patch = commands.patch('vue');
+export const patch = commands.patch("vue");
 
 /** @internal */
-export const unload = commands.unload('vue');
+export const unload = commands.unload("vue");

@@ -1,6 +1,6 @@
-import { computed } from 'vue';
-import { globalStore, setGlobalStoreOptions } from './store';
-import type { StoreBackendOptions, StoreRef, StoreRefOptions } from './types';
+import { computed } from "vue";
+import { globalStore, setGlobalStoreOptions } from "./store";
+import type { StoreBackendOptions, StoreRef, StoreRefOptions } from "./types";
 
 export function storeRef<T>(
   key: string,

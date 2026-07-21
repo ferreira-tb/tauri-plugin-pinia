@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Accessing from Rust
-titleTemplate: '@tauri-store/zustand'
+titleTemplate: "@tauri-store/zustand"
 description: Accessing stores from Rust
 ---
 

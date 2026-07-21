@@ -83,9 +83,9 @@ tauri::Builder::default()
 ::: code-group
 
 ```typescript [src/stores/counter.ts]
-import { Store } from 'tauri-store';
+import { Store } from "tauri-store";
 
-const store = new Store('counter', { counter: 0 });
+const store = new Store("counter", { counter: 0 });
 ```
 
 :::
@@ -105,14 +105,14 @@ Stores won't be saved nor synchronized until you [start](https://tb.dev.br/tauri
 ```typescript
 // Get a value.
 // This is a synchronous operation!
-const counter = store.get('counter');
+const counter = store.get("counter");
 console.log(counter);
 
 // Set a value.
-store.set('counter', 42);
+store.set("counter", 42);
 
 // Update a value with a callback.
-store.update('counter', (value) => value + 1);
+store.update("counter", (value) => value + 1);
 
 // Set multiple values at once.
 store.patch({ counter: 0 });

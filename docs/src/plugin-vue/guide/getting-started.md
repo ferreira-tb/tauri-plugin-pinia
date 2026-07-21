@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Getting started
-titleTemplate: '@tauri-store/vue'
+titleTemplate: "@tauri-store/vue"
 description: Getting started
 ---
 
@@ -84,9 +84,9 @@ tauri::Builder::default()
 ::: code-group
 
 ```typescript [src/lib/stores/counter.ts]
-import { createStore } from '@tauri-store/vue';
+import { createStore } from "@tauri-store/vue";
 
-export const store = createStore('counter', { counter: 0 });
+export const store = createStore("counter", { counter: 0 });
 ```
 
 :::
@@ -109,7 +109,7 @@ Stores won't be saved nor synchronized until you [start](https://tb.dev.br/tauri
 
 ```vue
 <script>
-import { store } from '@/stores/counter';
+import { store } from "@/stores/counter";
 </script>
 
 <template>

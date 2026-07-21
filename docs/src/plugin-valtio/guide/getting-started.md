@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Getting started
-titleTemplate: '@tauri-store/valtio'
+titleTemplate: "@tauri-store/valtio"
 description: Getting started
 ---
 
@@ -84,9 +84,9 @@ tauri::Builder::default()
 ::: code-group
 
 ```typescript [src/stores/counter.ts]
-import { store } from '@tauri-store/valtio';
+import { store } from "@tauri-store/valtio";
 
-export const counterStore = store('counter', { counter: 0 });
+export const counterStore = store("counter", { counter: 0 });
 
 export const increment = () => {
   counterStore.state.counter++;
@@ -108,8 +108,8 @@ Stores won't be saved nor synchronized until you [start](https://tb.dev.br/tauri
 5. Use the store in your React components:
 
 ```tsx
-import { useSnapshot } from 'valtio';
-import { counterStore, increment } from '@/stores/counter';
+import { useSnapshot } from "valtio";
+import { counterStore, increment } from "@/stores/counter";
 
 export default function MyComponent() {
   // `state` is the actual valtio proxy.

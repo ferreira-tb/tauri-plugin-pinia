@@ -6,7 +6,7 @@ type Props = {
 };
 
 withDefaults(defineProps<Props>(), {
-  size: '1em',
+  size: "1em",
 });
 </script>
 

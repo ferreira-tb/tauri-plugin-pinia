@@ -1,5 +1,5 @@
-import type { Writable } from 'svelte/store';
-import type { State, StoreOptions, TauriStoreContract } from '@tauri-store/shared';
+import type { Writable } from "svelte/store";
+import type { State, StoreOptions, TauriStoreContract } from "@tauri-store/shared";
 
 export type {
   LooseTimeStrategyKind,
@@ -16,7 +16,7 @@ export type {
   TauriStoreContract,
   TimeStrategy,
   TimeStrategyKind,
-} from '@tauri-store/shared';
+} from "@tauri-store/shared";
 
 /**
  * `Writable<S>` ensures that the store also adheres to the Svelte store contract.
@@ -38,5 +38,5 @@ export interface TauriPluginSvelteRuneStoreOptions<S extends State> extends Stor
    * @see https://svelte.dev/docs/svelte/$effect#$effect.pre
    * @default 'post'
    */
-  flush?: 'post' | 'pre';
+  flush?: "post" | "pre";
 }

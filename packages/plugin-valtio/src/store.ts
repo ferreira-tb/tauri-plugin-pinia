@@ -1,7 +1,7 @@
-import * as commands from './commands';
-import { subscribeKey } from 'valtio/utils';
-import type { StoreBuilderReturn, TauriPluginValtioStoreOptions } from './types';
-import { type INTERNAL_Op, snapshot, subscribe, proxy as toProxy } from 'valtio';
+import * as commands from "./commands";
+import { subscribeKey } from "valtio/utils";
+import type { StoreBuilderReturn, TauriPluginValtioStoreOptions } from "./types";
+import { type INTERNAL_Op, snapshot, subscribe, proxy as toProxy } from "valtio";
 import {
   BaseStore,
   debounce,
@@ -19,7 +19,7 @@ import {
   type StoreHooks,
   throttle,
   TimeStrategy,
-} from '@tauri-store/shared';
+} from "@tauri-store/shared";
 
 /**
  * Wrapper for the Valtio proxy state.
@@ -75,10 +75,10 @@ class Store<S extends State> extends BaseStore<S> {
       this.patchBackend(state as S);
     };
 
-    if (this.syncStrategy === 'debounce') {
+    if (this.syncStrategy === "debounce") {
       const fn = debounce(patchBackend, this.syncInterval);
       return subscribe(this.state, fn);
-    } else if (this.syncStrategy === 'throttle') {
+    } else if (this.syncStrategy === "throttle") {
       const fn = throttle(patchBackend, this.syncInterval);
       return subscribe(this.state, fn);
     }

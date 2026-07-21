@@ -1,5 +1,5 @@
-export { storeRef } from './ref';
-export { createStore, globalStore, setGlobalStoreOptions, store, type Store } from './store';
+export { storeRef } from "./ref";
+export { createStore, globalStore, setGlobalStoreOptions, store, type Store } from "./store";
 
 export {
   allowSave,
@@ -20,7 +20,7 @@ export {
   setAutosave,
   setSaveStrategy,
   setStoreOptions,
-} from './commands';
+} from "./commands";
 
 export type {
   LooseTimeStrategyKind,
@@ -40,4 +40,4 @@ export type {
   TauriStoreContract,
   TimeStrategy,
   TimeStrategyKind,
-} from './types';
+} from "./types";

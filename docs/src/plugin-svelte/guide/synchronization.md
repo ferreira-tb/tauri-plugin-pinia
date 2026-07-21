@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Synchronization
-titleTemplate: '@tauri-store/svelte'
+titleTemplate: "@tauri-store/svelte"
 description: Synchronization
 ---
 

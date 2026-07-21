@@ -18,19 +18,19 @@ Persistent stores for Tauri.
 > There are also [custom plugins](#plugins) that tightly integrate with your favorite framework or library.
 
 ```typescript
-import { Store } from 'tauri-store';
+import { Store } from "tauri-store";
 
-const store = new Store('my-store', { counter: 0 });
+const store = new Store("my-store", { counter: 0 });
 
 // Get a value. This is a synchronous operation!
-const counter = store.get('counter');
+const counter = store.get("counter");
 console.log(counter);
 
 // Set a value.
-store.set('counter', 42);
+store.set("counter", 42);
 
 // Update a value with a callback.
-store.update('counter', (value) => value + 1);
+store.update("counter", (value) => value + 1);
 
 // Set multiple values at once.
 store.patch({ counter: 0 });

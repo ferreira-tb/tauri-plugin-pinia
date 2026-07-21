@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Lifecycle hooks
-titleTemplate: '@tauri-store/svelte'
+titleTemplate: "@tauri-store/svelte"
 description: Lifecycle hooks
 ---
 
@@ -12,10 +12,10 @@ description: Lifecycle hooks
 JavaScript hooks can be registered using the [StoreHooks](https://tb.dev.br/tauri-store/js-docs/plugin-svelte/interfaces/StoreHooks.html) option.
 
 ```typescript
-import { store } from '@tauri-store/svelte';
+import { store } from "@tauri-store/svelte";
 
 const value = { counter: 0 };
-const counterStore = store('counter', value, {
+const counterStore = store("counter", value, {
   hooks: {
     error: (err) => console.error(err),
     beforeBackendSync: (state) => {
@@ -34,7 +34,7 @@ Registers a hook to be called before a store sends its state to Rust. This can b
 const hooks: StoreHooks = {
   beforeBackendSync: (state) => {
     state.foo = null;
-    state.nested.bar.baz = 'qux';
+    state.nested.bar.baz = "qux";
     return state;
   },
 };

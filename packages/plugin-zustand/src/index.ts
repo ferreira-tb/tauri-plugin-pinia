@@ -1,4 +1,4 @@
-export { createTauriStore, tauri, type TauriStore } from './store';
+export { createTauriStore, tauri, type TauriStore } from "./store";
 
 export type {
   LooseTimeStrategyKind,
@@ -16,7 +16,7 @@ export type {
   TauriStoreContract,
   TimeStrategy,
   TimeStrategyKind,
-} from './types';
+} from "./types";
 
 export {
   allowSave,
@@ -37,4 +37,4 @@ export {
   setAutosave,
   setSaveStrategy,
   setStoreOptions,
-} from './commands';
+} from "./commands";

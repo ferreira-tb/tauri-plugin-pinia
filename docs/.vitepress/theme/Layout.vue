@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import DefaultTheme from 'vitepress/theme';
-import PluginMenu from './components/PluginMenu.vue';
+import DefaultTheme from "vitepress/theme";
+import PluginMenu from "./components/PluginMenu.vue";
 
 const { Layout: DefaultLayout } = DefaultTheme;
 </script>

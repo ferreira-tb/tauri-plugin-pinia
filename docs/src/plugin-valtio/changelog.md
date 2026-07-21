@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Changelog
-titleTemplate: '@tauri-store/valtio'
+titleTemplate: "@tauri-store/valtio"
 description: Changelog for @tauri-store/valtio
 outline: 2
 ---
@@ -115,11 +115,11 @@ Please refer to its [changelog](https://tb.dev.br/tauri-store/changelog) for mor
 - Add `toStore` helper function to create a store from an existing proxy.
 
 ```typescript
-import { proxy } from 'valtio';
-import { toStore } from '@tauri-store/valtio';
+import { proxy } from "valtio";
+import { toStore } from "@tauri-store/valtio";
 
 const state = proxy({ counter: 0 });
-const foo = toStore('foo', state);
+const foo = toStore("foo", state);
 ```
 
 ## 2.1.1

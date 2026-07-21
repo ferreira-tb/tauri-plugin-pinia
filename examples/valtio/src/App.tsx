@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-floating-promises */
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import { useEffect } from 'react';
-import { useSnapshot } from 'valtio';
-import { exit } from '@tauri-apps/plugin-process';
-import { increment, openStore, store } from './store';
-import { clearAutosave, setAutosave } from '@tauri-store/valtio/src/index.js';
+import { useEffect } from "react";
+import { useSnapshot } from "valtio";
+import { exit } from "@tauri-apps/plugin-process";
+import { increment, openStore, store } from "./store";
+import { clearAutosave, setAutosave } from "@tauri-store/valtio/src/index.js";
 
 export default function App() {
   const storeState = useSnapshot(store.state);
 
   useEffect(() => {
-    window.addEventListener('keydown', onKeyDown);
+    window.addEventListener("keydown", onKeyDown);
     return () => {
-      window.removeEventListener('keydown', onKeyDown);
+      window.removeEventListener("keydown", onKeyDown);
     };
   }, []);
 
@@ -55,7 +55,7 @@ export default function App() {
 }
 
 function onKeyDown(e: KeyboardEvent) {
-  if (e.key === 'Escape') {
+  if (e.key === "Escape") {
     e.preventDefault();
     exit(0);
   }

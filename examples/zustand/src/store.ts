@@ -1,6 +1,6 @@
-import { create } from 'zustand';
-import { open } from '@tauri-apps/plugin-shell';
-import { tauri } from '@tauri-store/zustand/src/index.js';
+import { create } from "zustand";
+import { open } from "@tauri-apps/plugin-shell";
+import { tauri } from "@tauri-store/zustand/src/index.js";
 
 type State = {
   counter: number;
@@ -15,9 +15,9 @@ export const useCounterStore = create<Action & State>((set) => ({
   increment: () => set((state) => ({ counter: state.counter + 1 })),
 }));
 
-export const tauriHandler = tauri('counter-store', useCounterStore, {
+export const tauriHandler = tauri("counter-store", useCounterStore, {
   autoStart: true,
-  saveStrategy: 'debounce',
+  saveStrategy: "debounce",
   saveInterval: 1000,
   hooks: {
     beforeBackendSync: (state) => {

@@ -1,6 +1,6 @@
-import * as commands from './commands';
-import type { TauriStoreOptions } from './types';
-import { effect, effectScope, signal } from 'alien-signals';
+import * as commands from "./commands";
+import type { TauriStoreOptions } from "./types";
+import { effect, effectScope, signal } from "alien-signals";
 import {
   BaseStore,
   debounce,
@@ -19,7 +19,7 @@ import {
   type TauriStoreContract,
   throttle,
   TimeStrategy,
-} from '@tauri-store/shared';
+} from "@tauri-store/shared";
 
 /**
  * A key-value store that can sync its state with the Rust backend and persist it to disk.
@@ -75,9 +75,9 @@ export class Store<S extends State> extends BaseStore<S> implements TauriStoreCo
       this.patchBackend(state);
     };
 
-    if (this.syncStrategy === 'debounce') {
+    if (this.syncStrategy === "debounce") {
       patchBackend = debounce(patchBackend, this.syncInterval);
-    } else if (this.syncStrategy === 'throttle') {
+    } else if (this.syncStrategy === "throttle") {
       patchBackend = throttle(patchBackend, this.syncInterval);
     }
 
@@ -213,7 +213,7 @@ export class Store<S extends State> extends BaseStore<S> implements TauriStoreCo
   };
 
   private readonly clone = <T>(value: T): T => {
-    if (typeof this.options.clone === 'function') {
+    if (typeof this.options.clone === "function") {
       return this.options.clone(value);
     } else if (this.options.clone) {
       return structuredClone(value);

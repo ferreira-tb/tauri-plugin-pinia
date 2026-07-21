@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite';
-import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from "vite";
+import { sveltekit } from "@sveltejs/kit/vite";
 
 export default defineConfig({
   plugins: [sveltekit()],
@@ -7,7 +7,7 @@ export default defineConfig({
     emptyOutDir: true,
     minify: false,
     rolldownOptions: {
-      external: [/^@tauri-apps/, /^@tauri-store/, 'svelte', 'svelte/store'],
+      external: [/^@tauri-apps/, /^@tauri-store/, "svelte", "svelte/store"],
     },
   },
 });

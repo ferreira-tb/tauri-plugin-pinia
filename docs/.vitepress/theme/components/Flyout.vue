@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ref, type VNode } from 'vue';
-import VPMenu from 'vitepress/dist/client/theme-default/components/VPMenu.vue';
+import { ref, type VNode } from "vue";
+import VPMenu from "vitepress/dist/client/theme-default/components/VPMenu.vue";
 
 defineProps<{
   label?: string;
@@ -45,14 +45,14 @@ const open = ref(false);
   color: var(--vp-c-brand-1);
 }
 
-.button[aria-expanded='false'] + .menu {
+.button[aria-expanded="false"] + .menu {
   transform: translateY(0);
   visibility: hidden;
   opacity: 0;
 }
 
 .flyout:hover .menu,
-.button[aria-expanded='true'] + .menu {
+.button[aria-expanded="true"] + .menu {
   transform: translateY(0);
   visibility: visible;
   opacity: 1;

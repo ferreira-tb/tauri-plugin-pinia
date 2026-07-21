@@ -1,6 +1,6 @@
-import { tick } from 'svelte';
-import * as commands from '../commands';
-import type { TauriPluginSvelteRuneStoreOptions } from '../types';
+import { tick } from "svelte";
+import * as commands from "../commands";
+import type { TauriPluginSvelteRuneStoreOptions } from "../types";
 import {
   BaseStore,
   debounce,
@@ -19,11 +19,11 @@ import {
   type TauriStoreContract,
   throttle,
   TimeStrategy,
-} from '@tauri-store/shared';
+} from "@tauri-store/shared";
 
-type Flush = TauriPluginSvelteRuneStoreOptions<State>['flush'];
+type Flush = TauriPluginSvelteRuneStoreOptions<State>["flush"];
 
-const DEFAULT_FLUSH: NonNullable<Flush> = 'post';
+const DEFAULT_FLUSH: NonNullable<Flush> = "post";
 
 /**
  * A reactive store that can sync its state with the Rust backend and persist it to disk.
@@ -94,9 +94,9 @@ export class RuneStore<S extends State> extends BaseStore<S> implements TauriSto
       this.patchBackend(state);
     };
 
-    if (this.syncStrategy === 'debounce') {
+    if (this.syncStrategy === "debounce") {
       patchBackend = debounce(patchBackend, this.syncInterval);
-    } else if (this.syncStrategy === 'throttle') {
+    } else if (this.syncStrategy === "throttle") {
       patchBackend = throttle(patchBackend, this.syncInterval);
     }
 
@@ -166,10 +166,10 @@ export class RuneStore<S extends State> extends BaseStore<S> implements TauriSto
 function createEffectRoot(fn: Fn, flush: Flush = DEFAULT_FLUSH): Fn {
   return $effect.root(() => {
     switch (flush) {
-      case 'post':
+      case "post":
         $effect(fn);
         break;
-      case 'pre':
+      case "pre":
         $effect.pre(fn);
         break;
     }

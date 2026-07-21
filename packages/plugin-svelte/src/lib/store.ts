@@ -1,13 +1,13 @@
-import { tick } from 'svelte';
-import * as commands from './commands';
-import type { StoreContract, TauriPluginSvelteStoreOptions } from './types';
+import { tick } from "svelte";
+import * as commands from "./commands";
+import type { StoreContract, TauriPluginSvelteStoreOptions } from "./types";
 import {
   type Subscriber,
   type Unsubscriber,
   type Updater,
   writable,
   type Writable,
-} from 'svelte/store';
+} from "svelte/store";
 import {
   BaseStore,
   debounce,
@@ -25,7 +25,7 @@ import {
   type StoreHooks,
   throttle,
   TimeStrategy,
-} from '@tauri-store/shared';
+} from "@tauri-store/shared";
 
 /**
  * A [writable store] that can sync its state with the Rust backend and persist it to disk.
@@ -131,10 +131,10 @@ export class Store<S extends State> extends BaseStore<S> implements StoreContrac
       this.patchBackend(value);
     };
 
-    if (this.syncStrategy === 'debounce') {
+    if (this.syncStrategy === "debounce") {
       const fn = debounce(patchBackend, this.syncInterval);
       return this.subscribe(fn);
-    } else if (this.syncStrategy === 'throttle') {
+    } else if (this.syncStrategy === "throttle") {
       const fn = throttle(patchBackend, this.syncInterval);
       return this.subscribe(fn);
     }

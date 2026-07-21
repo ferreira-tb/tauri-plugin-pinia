@@ -1,13 +1,13 @@
-import { open } from '@tauri-apps/plugin-shell';
-import { Store } from 'tauri-store/src/index.js';
+import { open } from "@tauri-apps/plugin-shell";
+import { Store } from "tauri-store/src/index.js";
 
 const counter = {
   counter: 0,
 };
 
-export const store = new Store('counter-store', counter, {
+export const store = new Store("counter-store", counter, {
   autoStart: true,
-  saveStrategy: 'debounce',
+  saveStrategy: "debounce",
   saveInterval: 1000,
   hooks: {
     beforeBackendSync: (state) => {
@@ -23,5 +23,5 @@ export async function openStore() {
 }
 
 export function increment() {
-  store.update('counter', (it) => ++it);
+  store.update("counter", (it) => ++it);
 }

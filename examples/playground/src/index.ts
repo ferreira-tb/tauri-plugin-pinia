@@ -1,12 +1,12 @@
 /* eslint-disable unicorn/no-global-object-property-assignment */
-import App from './App.vue';
-import { createApp } from 'vue';
-import { createPinia } from 'pinia';
-import * as $vue from '@tauri-store/vue/src/index.js';
-import * as $pinia from '@tauri-store/pinia/src/index.js';
-import * as $valtio from '@tauri-store/valtio/src/index.js';
-import * as $zustand from '@tauri-store/zustand/src/index.js';
-import * as $svelte from '@tauri-store/svelte/src/lib/index.js';
+import App from "./App.vue";
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import * as $vue from "@tauri-store/vue/src/index.js";
+import * as $pinia from "@tauri-store/pinia/src/index.js";
+import * as $valtio from "@tauri-store/valtio/src/index.js";
+import * as $zustand from "@tauri-store/zustand/src/index.js";
+import * as $svelte from "@tauri-store/svelte/src/lib/index.js";
 
 declare global {
   interface Window {
@@ -33,4 +33,4 @@ pinia.use(
   })
 );
 
-app.use(pinia).mount('#app');
+app.use(pinia).mount("#app");

@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Getting started
-titleTemplate: '@tauri-store/pinia'
+titleTemplate: "@tauri-store/pinia"
 description: Getting started
 ---
 
@@ -84,9 +84,9 @@ tauri::Builder::default()
 ::: code-group
 
 ```typescript [src/index.ts]
-import { createApp } from 'vue';
-import { createPinia } from 'pinia';
-import { createPlugin } from '@tauri-store/pinia';
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import { createPlugin } from "@tauri-store/pinia";
 
 const app = createApp(App);
 
@@ -94,7 +94,7 @@ const pinia = createPinia();
 pinia.use(createPlugin());
 
 app.use(pinia);
-app.mount('#app');
+app.mount("#app");
 ```
 
 ::: tip
@@ -106,10 +106,10 @@ app.mount('#app');
 ::: code-group
 
 ```typescript [src/stores/counter.ts]
-import { ref } from 'vue';
-import { defineStore } from 'pinia';
+import { ref } from "vue";
+import { defineStore } from "pinia";
 
-export const useStore = defineStore('counter', () => {
+export const useStore = defineStore("counter", () => {
   const counter = ref(0);
   return { counter };
 });
@@ -135,8 +135,8 @@ If you are using [Nuxt](https://nuxt.com/), you can create a [Nuxt plugin](https
 ::: code-group
 
 ```typescript [plugins/pinia.ts]
-import type { Pinia } from 'pinia';
-import { TauriPluginPinia } from '@tauri-store/pinia';
+import type { Pinia } from "pinia";
+import { TauriPluginPinia } from "@tauri-store/pinia";
 
 // See: https://pinia.vuejs.org/core-concepts/plugins.html#Nuxt-js
 export default defineNuxtPlugin(({ $pinia }) => {

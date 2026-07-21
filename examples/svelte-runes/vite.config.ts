@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite';
-import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from "vite";
+import { sveltekit } from "@sveltejs/kit/vite";
 
 export default defineConfig({
   clearScreen: false,
@@ -8,13 +8,13 @@ export default defineConfig({
     port: 1422,
     strictPort: true,
     watch: {
-      ignored: ['**/src-tauri/**'],
+      ignored: ["**/src-tauri/**"],
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     emptyOutDir: true,
     minify: false,
-    target: 'esnext',
+    target: "esnext",
   },
 });

@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Lifecycle hooks
-titleTemplate: '@tauri-store/pinia'
+titleTemplate: "@tauri-store/pinia"
 description: Lifecycle hooks
 ---
 
@@ -12,14 +12,14 @@ description: Lifecycle hooks
 JavaScript hooks can be registered using the [StoreHooks](https://tb.dev.br/tauri-store/js-docs/plugin-pinia/interfaces/StoreHooks.html) option.
 
 ```typescript
-import { ref } from 'vue';
-import { defineStore } from 'pinia';
+import { ref } from "vue";
+import { defineStore } from "pinia";
 
 function counterStore() {
   return { counter: ref(0) };
 }
 
-export const useCounterStore = defineStore('counter', counterStore, {
+export const useCounterStore = defineStore("counter", counterStore, {
   tauri: {
     hooks: {
       error: (err) => console.error(err),
@@ -40,7 +40,7 @@ Registers a hook to be called before a store sends its state to Rust. This can b
 const hooks: StoreHooks = {
   beforeBackendSync: (state) => {
     state.foo = null;
-    state.nested.bar.baz = 'qux';
+    state.nested.bar.baz = "qux";
     return state;
   },
 };

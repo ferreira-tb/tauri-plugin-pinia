@@ -1,4 +1,4 @@
-import type { State, StoreOptions } from '@tauri-store/shared';
+import type { State, StoreOptions } from "@tauri-store/shared";
 
 export type {
   LooseTimeStrategyKind,
@@ -15,7 +15,7 @@ export type {
   TauriStoreContract,
   TimeStrategy,
   TimeStrategyKind,
-} from '@tauri-store/shared';
+} from "@tauri-store/shared";
 
 export type CloneFn = <T>(value: T) => T;
 

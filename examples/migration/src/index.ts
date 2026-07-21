@@ -1,13 +1,13 @@
-import { type State, store } from './store';
-import { exit } from '@tauri-apps/plugin-process';
+import { type State, store } from "./store";
+import { exit } from "@tauri-apps/plugin-process";
 
 export function init() {
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener("DOMContentLoaded", () => {
     onLoad().catch(console.error);
   });
 
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
       e.preventDefault();
       exit(0).catch(console.error);
     }
@@ -21,6 +21,6 @@ async function onLoad() {
 }
 
 function update(state: State) {
-  const pre = document.querySelector('#content')!;
+  const pre = document.querySelector("#content")!;
   pre.textContent = JSON.stringify(state, null, 2);
 }

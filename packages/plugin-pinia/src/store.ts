@@ -1,7 +1,7 @@
-import * as commands from './commands';
-import type { PiniaPluginContext } from 'pinia';
-import { nextTick, watch, type WatchOptions } from 'vue';
-import type { TauriPluginPiniaOptions, TauriPluginPiniaStoreOptions } from './types';
+import * as commands from "./commands";
+import type { PiniaPluginContext } from "pinia";
+import { nextTick, watch, type WatchOptions } from "vue";
+import type { TauriPluginPiniaOptions, TauriPluginPiniaStoreOptions } from "./types";
 import {
   BaseStore,
   debounce,
@@ -18,7 +18,7 @@ import {
   type State,
   throttle,
   TimeStrategy,
-} from '@tauri-store/shared';
+} from "@tauri-store/shared";
 
 export class Store extends BaseStore {
   protected readonly options: TauriPluginPiniaStoreOptions;
@@ -39,7 +39,7 @@ export class Store extends BaseStore {
       deep: options.deep ?? true,
       filterKeys: options.filterKeys ?? DEFAULT_FILTER_KEYS,
       filterKeysStrategy: options.filterKeysStrategy ?? DEFAULT_FILTER_KEYS_STRATEGY,
-      flush: options.flush ?? 'pre',
+      flush: options.flush ?? "pre",
       hooks: merge(options.hooks, DEFAULT_HOOKS),
       save: options.save ?? DEFAULT_SAVE,
       saveInterval: saveStrategy.interval,
@@ -77,9 +77,9 @@ export class Store extends BaseStore {
       flush: this.options.flush,
     };
 
-    if (this.syncStrategy === 'debounce') {
+    if (this.syncStrategy === "debounce") {
       patchBackend = debounce(patchBackend, this.syncInterval);
-    } else if (this.syncStrategy === 'throttle') {
+    } else if (this.syncStrategy === "throttle") {
       patchBackend = throttle(patchBackend, this.syncInterval);
     }
 
