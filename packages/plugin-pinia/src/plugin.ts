@@ -1,4 +1,5 @@
 import { Store } from './store';
+import { markRaw } from 'vue';
 import * as commands from './commands';
 import type { PiniaPluginContext } from 'pinia';
 import type { TauriPluginPiniaOptions } from './types';
@@ -30,7 +31,7 @@ export function createPlugin(pluginOptions: TauriPluginPiniaOptions = {}) {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   return function (ctx: PiniaPluginContext) {
     const store = new Store(ctx, pluginOptions);
-    const $tauri: TauriStoreContract = {
+    const $tauri: TauriStoreContract = markRaw({
       id: store.id,
       getPath: () => commands.getStorePath(store.id),
       save: () => commands.save(store.id),
@@ -43,7 +44,7 @@ export function createPlugin(pluginOptions: TauriPluginPiniaOptions = {}) {
         await commands.destroy(store.id);
         await store.stop();
       },
-    };
+    });
 
     return { $tauri };
   };
