@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Changelog
-titleTemplate: '@tauri-store/pinia'
+titleTemplate: "@tauri-store/pinia"
 description: Changelog for @tauri-store/pinia
 outline: 2
 ---
@@ -11,6 +11,12 @@ outline: 2
 ## Next
 
 _Nothing yet._
+
+## 5.0.1
+
+### Bug fixes
+
+- Wrap `$tauri` with `markRaw`.
 
 ## 5.0.0
 

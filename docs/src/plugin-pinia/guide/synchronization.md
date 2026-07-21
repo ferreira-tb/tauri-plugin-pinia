@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Synchronization
-titleTemplate: '@tauri-store/pinia'
+titleTemplate: "@tauri-store/pinia"
 description: Synchronization
 ---
 

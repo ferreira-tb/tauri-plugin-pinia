@@ -1,42 +1,42 @@
 packages:
-  - 'docs'
-  - 'examples/migration'
-  - 'examples/pinia'
-  - 'examples/pinia-mobile'
-  - 'examples/pinia-nuxt'
-  - 'examples/playground'
-  - 'examples/svelte'
-  - 'examples/svelte-runes'
-  - 'examples/valtio'
-  - 'examples/vanilla'
-  - 'examples/vue'
-  - 'examples/zustand'
-  - 'packages/plugin-pinia'
-  - 'packages/plugin-svelte'
-  - 'packages/plugin-valtio'
-  - 'packages/plugin-vue'
-  - 'packages/plugin-zustand'
-  - 'packages/shared'
-  - 'packages/tauri-store'
+  - "docs"
+  - "examples/migration"
+  - "examples/pinia"
+  - "examples/pinia-mobile"
+  - "examples/pinia-nuxt"
+  - "examples/playground"
+  - "examples/svelte"
+  - "examples/svelte-runes"
+  - "examples/valtio"
+  - "examples/vanilla"
+  - "examples/vue"
+  - "examples/zustand"
+  - "packages/plugin-pinia"
+  - "packages/plugin-svelte"
+  - "packages/plugin-valtio"
+  - "packages/plugin-vue"
+  - "packages/plugin-zustand"
+  - "packages/shared"
+  - "packages/tauri-store"
 
 dedupePeers: true
 ignoreWorkspaceRootCheck: true
 
 allowBuilds:
-  '@parcel/watcher': false
+  "@parcel/watcher": false
   esbuild: false
 
 minimumReleaseAge: 1440
 minimumReleaseAgeStrict: true
 minimumReleaseAgeExclude:
-  - '@tb-dev/*'
-  - '@tsukilabs/*'
-  - '@sveltejs/kit@2.70.0'
+  - "@tb-dev/*"
+  - "@tsukilabs/*"
+  - prettier@3.9.6
 
 overrides:
-  ajv@>=7.0.0-alpha.0 <8.18.0: '>=8.18.0'
-  cookie@<0.7.0: '>=0.7.0'
+  ajv@>=7.0.0-alpha.0 <8.18.0: ">=8.18.0"
+  cookie@<0.7.0: ">=0.7.0"
   esbuild@>=0.27.3 <0.28.1: ^0.28.1
-  lodash@<=4.17.23: '>=4.18.0'
-  minimatch@<3.1.4: '>=3.1.4'
-  serialize-javascript@<7.0.5: '>=7.0.5'
+  lodash@<=4.17.23: ">=4.18.0"
+  minimatch@<3.1.4: ">=3.1.4"
+  serialize-javascript@<7.0.5: ">=7.0.5"

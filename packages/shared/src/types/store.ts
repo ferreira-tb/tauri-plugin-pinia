@@ -1,5 +1,5 @@
-import type { MaybePromise, Option } from './utils';
-import type { LooseTimeStrategyKind, TimeStrategyRawTuple } from '../time-strategy';
+import type { MaybePromise, Option } from "./utils";
+import type { LooseTimeStrategyKind, TimeStrategyRawTuple } from "../time-strategy";
 
 /** Options that can also be updated from Rust. */
 export interface StoreBackendOptions {
@@ -180,4 +180,4 @@ export type State = Record<string, unknown>;
 export type StoreKeyFilter = string | string[] | RegExp | null;
 
 /** Strategy to use when filtering keys. */
-export type StoreKeyFilterStrategy = 'pick' | 'omit' | ((key: string) => boolean);
+export type StoreKeyFilterStrategy = "pick" | "omit" | ((key: string) => boolean);

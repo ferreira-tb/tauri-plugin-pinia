@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Persisting state
-titleTemplate: '@tauri-store/valtio'
+titleTemplate: "@tauri-store/valtio"
 description: Persisting store state
 ---
 
@@ -12,13 +12,13 @@ All your stores are automatically persisted to disk upon a graceful exit, but yo
 ::: code-group
 
 ```typescript [JavaScript]
-import { save, saveAll } from '@tauri-store/valtio';
+import { save, saveAll } from "@tauri-store/valtio";
 
 // Save a single store.
-await save('my-store');
+await save("my-store");
 
 // Save some stores.
-await save('store-1', 'store-2', 'store-3');
+await save("store-1", "store-2", "store-3");
 
 // Save all stores.
 await saveAll();
@@ -68,7 +68,7 @@ You can also enable [`autosave`](https://docs.rs/tauri-plugin-valtio/latest/taur
 ::: code-group
 
 ```typescript [JavaScript]
-import { setAutosave, clearAutosave } from '@tauri-store/valtio';
+import { setAutosave, clearAutosave } from "@tauri-store/valtio";
 
 // Save every five minutes.
 await setAutosave(300);

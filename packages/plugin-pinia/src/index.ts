@@ -1,7 +1,7 @@
-import type { TauriPluginPiniaStoreOptions } from './types';
-import type { TauriStoreContract } from '@tauri-store/shared';
+import type { TauriPluginPiniaStoreOptions } from "./types";
+import type { TauriStoreContract } from "@tauri-store/shared";
 
-export { createPlugin, TauriPluginPinia } from './plugin';
+export { createPlugin, TauriPluginPinia } from "./plugin";
 
 export {
   allowSave,
@@ -22,7 +22,7 @@ export {
   setAutosave,
   setSaveStrategy,
   setStoreOptions,
-} from './commands';
+} from "./commands";
 
 export type {
   LooseTimeStrategyKind,
@@ -41,9 +41,9 @@ export type {
   TauriStoreContract,
   TimeStrategy,
   TimeStrategyKind,
-} from './types';
+} from "./types";
 
-declare module 'pinia' {
+declare module "pinia" {
   export interface PiniaCustomProperties {
     readonly $tauri: TauriStoreContract;
   }

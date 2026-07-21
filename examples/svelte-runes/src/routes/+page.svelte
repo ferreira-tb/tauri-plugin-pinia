@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { exit } from '@tauri-apps/plugin-process';
-  import { openStore, store } from '$lib/store.svelte';
-  import { clearAutosave, setAutosave } from '@tauri-store/svelte/src/lib/index.js';
+  import { exit } from "@tauri-apps/plugin-process";
+  import { openStore, store } from "$lib/store.svelte";
+  import { clearAutosave, setAutosave } from "@tauri-store/svelte/src/lib/index.js";
 
   function onKeyDown(event: KeyboardEvent) {
-    if (event.key === 'Escape') {
+    if (event.key === "Escape") {
       void exit(0);
     }
   }

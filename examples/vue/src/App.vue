@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { onKeyDown } from '@vueuse/core';
-import { openStore, store } from './store';
-import { exit } from '@tauri-apps/plugin-process';
-import { clearAutosave, setAutosave } from '@tauri-store/vue/src/index.js';
+import { onKeyDown } from "@vueuse/core";
+import { openStore, store } from "./store";
+import { exit } from "@tauri-apps/plugin-process";
+import { clearAutosave, setAutosave } from "@tauri-store/vue/src/index.js";
 
 const { start, stop, save, saveNow } = store.$tauri;
 
-onKeyDown('Escape', () => void exit(0));
+onKeyDown("Escape", () => void exit(0));
 </script>
 
 <template>

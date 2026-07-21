@@ -1,4 +1,4 @@
-import type { State, StoreBackendRawOptions } from './store';
+import type { State, StoreBackendRawOptions } from "./store";
 
 /** @internal */
 export interface ConfigChangePayload {

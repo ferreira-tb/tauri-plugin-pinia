@@ -1,13 +1,13 @@
-import { ref } from 'vue';
-import { defineStore } from 'pinia';
-import { open } from '@tauri-apps/plugin-shell';
+import { ref } from "vue";
+import { defineStore } from "pinia";
+import { open } from "@tauri-apps/plugin-shell";
 
 type Counter = {
   counter: number;
 };
 
 function store() {
-  const counter = ref<Counter['counter']>(0);
+  const counter = ref<Counter["counter"]>(0);
 
   function increment() {
     counter.value++;
@@ -19,9 +19,9 @@ function store() {
   };
 }
 
-export const useStore = defineStore('counter-store', store, {
+export const useStore = defineStore("counter-store", store, {
   tauri: {
-    saveStrategy: 'debounce',
+    saveStrategy: "debounce",
     saveInterval: 1000,
     hooks: {
       beforeBackendSync: (state: Counter) => {

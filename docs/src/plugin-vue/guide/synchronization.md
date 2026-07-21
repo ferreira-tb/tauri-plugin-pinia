@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Synchronization
-titleTemplate: '@tauri-store/vue'
+titleTemplate: "@tauri-store/vue"
 description: Synchronization
 ---
 

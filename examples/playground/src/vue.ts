@@ -1,8 +1,8 @@
 /* eslint-disable unicorn/no-top-level-side-effects */
-import { createStore } from '@tauri-store/vue/src/index.js';
+import { createStore } from "@tauri-store/vue/src/index.js";
 
 export const vueStore = createStore(
-  'playground',
+  "playground",
   { counter: 0 },
   {
     autoStart: true,
@@ -11,7 +11,7 @@ export const vueStore = createStore(
   }
 );
 
-Object.defineProperty(window, '$vueStore', {
+Object.defineProperty(window, "$vueStore", {
   value: vueStore,
   enumerable: true,
   configurable: false,

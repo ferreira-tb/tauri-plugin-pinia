@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
-  compatibilityDate: 'latest',
-  modules: ['@pinia/nuxt'],
+  compatibilityDate: "latest",
+  modules: ["@pinia/nuxt"],
   ssr: false,
   devServer: {
     port: 1422,
@@ -14,13 +14,13 @@ export default defineNuxtConfig({
     server: {
       strictPort: true,
       watch: {
-        ignored: ['**/src-tauri/**'],
+        ignored: ["**/src-tauri/**"],
       },
     },
     build: {
       emptyOutDir: true,
       minify: false,
-      target: 'esnext',
+      target: "esnext",
     },
   },
 });

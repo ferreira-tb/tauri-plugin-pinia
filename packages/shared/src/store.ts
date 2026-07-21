@@ -1,8 +1,8 @@
-import { flushPromises } from './utils';
-import type * as commands from './commands';
-import { listen, StoreEvent } from './event';
-import { type LooseTimeStrategyKind, TimeStrategy } from './time-strategy';
-import { DEFAULT_AUTO_START, DEFAULT_FILTER_KEYS_STRATEGY } from './defaults';
+import { flushPromises } from "./utils";
+import type * as commands from "./commands";
+import { listen, StoreEvent } from "./event";
+import { type LooseTimeStrategyKind, TimeStrategy } from "./time-strategy";
+import { DEFAULT_AUTO_START, DEFAULT_FILTER_KEYS_STRATEGY } from "./defaults";
 import type {
   ConfigChangePayload,
   Option,
@@ -13,7 +13,7 @@ import type {
   StoreKeyFilter,
   StoreKeyFilterStrategy,
   StoreOptions,
-} from './types';
+} from "./types";
 
 /**
  * Base class for the store implementations.
@@ -174,7 +174,7 @@ export abstract class BaseStore<S extends State = State> {
   }
 
   private patchOptions(config: StoreBackendRawOptions): void {
-    if (typeof config.saveOnChange === 'boolean') {
+    if (typeof config.saveOnChange === "boolean") {
       this.options.saveOnChange = config.saveOnChange;
     }
 
@@ -190,7 +190,7 @@ export abstract class BaseStore<S extends State = State> {
     const strategy = this.options.filterKeysStrategy ?? DEFAULT_FILTER_KEYS_STRATEGY;
 
     // If the strategy is a callback, `filterKeys` doesn't matter, as we won't match against it.
-    if (!filter && typeof strategy !== 'function') {
+    if (!filter && typeof strategy !== "function") {
       return state;
     }
 
@@ -207,7 +207,7 @@ export abstract class BaseStore<S extends State = State> {
   protected async tryAutoStart(): Promise<void> {
     try {
       let autoStart = this.options.autoStart ?? DEFAULT_AUTO_START;
-      if (typeof autoStart !== 'boolean') {
+      if (typeof autoStart !== "boolean") {
         autoStart = await autoStart(this.id);
       }
 
@@ -270,7 +270,7 @@ export abstract class BaseStore<S extends State = State> {
   /**
    * {@link StoreHooks.error}
    */
-  protected get onError(): Option<StoreHooks<S>['error']> {
+  protected get onError(): Option<StoreHooks<S>["error"]> {
     return this.options.hooks?.error;
   }
 }
@@ -281,15 +281,15 @@ function shouldPickKey(
   key: string
 ): boolean {
   return (
-    (strategy === 'pick' && isKeyMatch(filter, key)) ||
-    (strategy === 'omit' && !isKeyMatch(filter, key)) ||
-    (typeof strategy === 'function' && strategy(key))
+    (strategy === "pick" && isKeyMatch(filter, key)) ||
+    (strategy === "omit" && !isKeyMatch(filter, key)) ||
+    (typeof strategy === "function" && strategy(key))
   );
 }
 
 function isKeyMatch(filter: StoreKeyFilter, key: string): boolean {
   return (
-    (typeof filter === 'string' && key === filter) ||
+    (typeof filter === "string" && key === filter) ||
     (Array.isArray(filter) && filter.includes(key)) ||
     (filter instanceof RegExp && filter.test(key))
   );

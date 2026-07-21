@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import '../assets/style.css';
-import { onKeyDown } from '@vueuse/core';
-import { exit } from '@tauri-apps/plugin-process';
-import { openStore, useStore } from './utils/store';
-import { clearAutosave, save, saveNow, setAutosave } from '@tauri-store/pinia/src/index.js';
+import "../assets/style.css";
+import { onKeyDown } from "@vueuse/core";
+import { exit } from "@tauri-apps/plugin-process";
+import { openStore, useStore } from "./utils/store";
+import { clearAutosave, save, saveNow, setAutosave } from "@tauri-store/pinia/src/index.js";
 
 const store = useStore();
 const { start, stop } = store.$tauri;
 
-onKeyDown('Escape', () => void exit(0));
+onKeyDown("Escape", () => void exit(0));
 </script>
 
 <template>

@@ -1,10 +1,10 @@
 {
   "name": "@tauri-store/pinia",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Persistent Pinia stores for Tauri",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@11.13.1",
+  "packageManager": "pnpm@11.15.1",
   "homepage": "https://tb.dev.br/tauri-store/plugin-pinia/guide/getting-started",
   "license": "MIT",
   "funding": "https://github.com/sponsors/ferreira-tb",

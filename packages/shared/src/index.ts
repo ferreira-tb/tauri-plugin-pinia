@@ -1,12 +1,12 @@
-export { BaseStore } from './store';
+export { BaseStore } from "./store";
 
-export * as commands from './commands';
+export * as commands from "./commands";
 
-export { listen, StoreEvent } from './event';
+export { listen, StoreEvent } from "./event";
 
-export { debounce, merge, throttle } from './utils';
+export { debounce, merge, throttle } from "./utils";
 
-export { type LooseTimeStrategyKind, TimeStrategy, type TimeStrategyKind } from './time-strategy';
+export { type LooseTimeStrategyKind, TimeStrategy, type TimeStrategyKind } from "./time-strategy";
 
 export {
   DEFAULT_AUTO_START,
@@ -21,7 +21,7 @@ export {
   DEFAULT_SYNC,
   DEFAULT_SYNC_INTERVAL,
   DEFAULT_SYNC_STRATEGY,
-} from './defaults';
+} from "./defaults";
 
 export type {
   ConfigChangePayload,
@@ -40,4 +40,4 @@ export type {
   StoreOptions,
   TauriStoreContract,
   Writable,
-} from './types';
+} from "./types";

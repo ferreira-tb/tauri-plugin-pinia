@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-floating-promises */
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import { useEffect } from 'react';
-import { exit } from '@tauri-apps/plugin-process';
-import { openStore, tauriHandler, useCounterStore } from './store';
-import { clearAutosave, setAutosave } from '@tauri-store/zustand/src/index.js';
+import { useEffect } from "react";
+import { exit } from "@tauri-apps/plugin-process";
+import { openStore, tauriHandler, useCounterStore } from "./store";
+import { clearAutosave, setAutosave } from "@tauri-store/zustand/src/index.js";
 
 export default function App() {
   const counter = useCounterStore((state) => state.counter);
   const increment = useCounterStore((state) => state.increment);
 
   useEffect(() => {
-    window.addEventListener('keydown', onKeyDown);
+    window.addEventListener("keydown", onKeyDown);
     return () => {
-      window.removeEventListener('keydown', onKeyDown);
+      window.removeEventListener("keydown", onKeyDown);
     };
   }, []);
 
@@ -58,7 +58,7 @@ export default function App() {
 }
 
 function onKeyDown(e: KeyboardEvent) {
-  if (e.key === 'Escape') {
+  if (e.key === "Escape") {
     e.preventDefault();
     exit(0);
   }

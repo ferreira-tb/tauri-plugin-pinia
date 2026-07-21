@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Changelog
-titleTemplate: '@tauri-store/vue'
+titleTemplate: "@tauri-store/vue"
 description: Changelog for @tauri-store/vue
 outline: 2
 ---

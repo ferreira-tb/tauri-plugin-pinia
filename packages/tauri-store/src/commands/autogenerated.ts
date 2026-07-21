@@ -7,63 +7,63 @@
 // upstream `tauri-store` crate or update the code generation itself.
 // This ensures that all plugins maintain consistent behavior.
 
-import { commands } from '@tauri-store/shared';
+import { commands } from "@tauri-store/shared";
 
 /**
  * Removes one or more stores from the save denylist.
  */
-export const allowSave = commands.allowSave('tauri-store');
+export const allowSave = commands.allowSave("tauri-store");
 
 /**
  * Removes one or more stores from the sync denylist.
  */
-export const allowSync = commands.allowSync('tauri-store');
+export const allowSync = commands.allowSync("tauri-store");
 
 /**
  * Stops the autosave.
  */
-export const clearAutosave = commands.clearAutosave('tauri-store');
+export const clearAutosave = commands.clearAutosave("tauri-store");
 
 /**
  * Adds one or more stores to the save denylist.
  */
-export const denySave = commands.denySave('tauri-store');
+export const denySave = commands.denySave("tauri-store");
 
 /**
  * Adds one or more stores to the sync denylist.
  */
-export const denySync = commands.denySync('tauri-store');
+export const denySync = commands.denySync("tauri-store");
 
 /**
  * Gets the default save strategy for the stores.
  * It can be overridden on a per-store basis.
  */
-export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy('tauri-store');
+export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy("tauri-store");
 
 /**
  * Directory where the stores are saved.
  */
-export const getStoreCollectionPath = commands.getStoreCollectionPath('tauri-store');
+export const getStoreCollectionPath = commands.getStoreCollectionPath("tauri-store");
 
 /**
  * Gets the save strategy used by a store.
  **/
-export const getSaveStrategy = commands.getSaveStrategy('tauri-store');
+export const getSaveStrategy = commands.getSaveStrategy("tauri-store");
 
 /**
  * Lists all the store ids.
  */
-export const getStoreIds = commands.getStoreIds('tauri-store');
+export const getStoreIds = commands.getStoreIds("tauri-store");
 
 /**
  * Path where the store is saved.
  **/
-export const getStorePath = commands.getStorePath('tauri-store');
+export const getStorePath = commands.getStorePath("tauri-store");
 
 /**
  * Gets the state of a store.
  */
-export const getStoreState = commands.getStoreState('tauri-store');
+export const getStoreState = commands.getStoreState("tauri-store");
 
 /**
  * Saves a store to the disk.
@@ -79,17 +79,17 @@ export const getStoreState = commands.getStoreState('tauri-store');
  * await save('my-store', 'my-store-2');
  * ```
  **/
-export const save = commands.save('tauri-store');
+export const save = commands.save("tauri-store");
 
 /**
  * Saves all the stores to the disk.
  */
-export const saveAll = commands.saveAll('tauri-store');
+export const saveAll = commands.saveAll("tauri-store");
 
 /**
  * Saves all the stores to the disk immediately, ignoring the save strategy.
  */
-export const saveAllNow = commands.saveAllNow('tauri-store');
+export const saveAllNow = commands.saveAllNow("tauri-store");
 
 /**
  * Saves a store to the disk immediately, ignoring the save strategy.
@@ -105,7 +105,7 @@ export const saveAllNow = commands.saveAllNow('tauri-store');
  * await saveNow('my-store', 'my-store-2');
  * ```
  */
-export const saveNow = commands.saveNow('tauri-store');
+export const saveNow = commands.saveNow("tauri-store");
 
 /**
  * Saves the stores periodically.
@@ -119,7 +119,7 @@ export const saveNow = commands.saveNow('tauri-store');
  * await setAutosave(5 * 60 * 1000);
  * ```
  */
-export const setAutosave = commands.setAutosave('tauri-store');
+export const setAutosave = commands.setAutosave("tauri-store");
 
 /**
  * Sets the save strategy for a store.
@@ -132,7 +132,7 @@ export const setAutosave = commands.setAutosave('tauri-store');
  * await setSaveStrategy('my-store', 'debounce', 1000);
  * ```
  */
-export const setSaveStrategy = commands.setSaveStrategy('tauri-store');
+export const setSaveStrategy = commands.setSaveStrategy("tauri-store");
 
 /**
  * Sets the store options.
@@ -148,20 +148,20 @@ export const setSaveStrategy = commands.setSaveStrategy('tauri-store');
  * });
  * ```
  */
-export const setStoreOptions = commands.setStoreOptions('tauri-store');
+export const setStoreOptions = commands.setStoreOptions("tauri-store");
 
 /////////////////////////
 // INTERNAL COMMANDS
 /////////////////////////
 
 /** @internal */
-export const destroy = commands.destroy('tauri-store');
+export const destroy = commands.destroy("tauri-store");
 
 /** @internal */
-export const load = commands.load('tauri-store');
+export const load = commands.load("tauri-store");
 
 /** @internal */
-export const patch = commands.patch('tauri-store');
+export const patch = commands.patch("tauri-store");
 
 /** @internal */
-export const unload = commands.unload('tauri-store');
+export const unload = commands.unload("tauri-store");

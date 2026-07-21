@@ -1,8 +1,9 @@
-import { Store } from './store';
-import * as commands from './commands';
-import type { PiniaPluginContext } from 'pinia';
-import type { TauriPluginPiniaOptions } from './types';
-import type { TauriStoreContract } from '@tauri-store/shared';
+import { markRaw } from "vue";
+import { Store } from "./store";
+import * as commands from "./commands";
+import type { PiniaPluginContext } from "pinia";
+import type { TauriPluginPiniaOptions } from "./types";
+import type { TauriStoreContract } from "@tauri-store/shared";
 
 /**
  * Creates the Pinia plugin.
@@ -45,7 +46,7 @@ export function createPlugin(pluginOptions: TauriPluginPiniaOptions = {}) {
       },
     };
 
-    return { $tauri };
+    return { $tauri: markRaw($tauri) };
   };
 }
 

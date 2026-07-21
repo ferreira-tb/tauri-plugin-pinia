@@ -1,8 +1,8 @@
 /** @type {import('typedoc').TypeDocOptions} */
 export default {
-  entryPoints: ['src/index.ts'],
-  out: '../../docs/.vitepress/dist/js-docs/tauri-store',
-  titleLink: 'https://tb.dev.br/tauri-store/guide/getting-started',
+  entryPoints: ["src/index.ts"],
+  out: "../../docs/.vitepress/dist/js-docs/tauri-store",
+  titleLink: "https://tb.dev.br/tauri-store/guide/getting-started",
   includeVersion: true,
   excludeInternal: true,
   excludePrivate: true,

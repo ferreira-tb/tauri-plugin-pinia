@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useStore } from './store';
-import { clearAutosave, save, saveNow, setAutosave } from '@tauri-store/pinia/src/index.js';
+import { useStore } from "./store";
+import { clearAutosave, save, saveNow, setAutosave } from "@tauri-store/pinia/src/index.js";
 
 const store = useStore();
 const { start, stop } = store.$tauri;

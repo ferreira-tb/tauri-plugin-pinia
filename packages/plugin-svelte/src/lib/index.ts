@@ -1,6 +1,6 @@
-export { Store, store } from './store';
+export { Store, store } from "./store";
 
-export { RuneStore, runeStore } from './runes';
+export { RuneStore, runeStore } from "./runes";
 
 export {
   allowSave,
@@ -21,7 +21,7 @@ export {
   setAutosave,
   setSaveStrategy,
   setStoreOptions,
-} from './commands';
+} from "./commands";
 
 export type {
   LooseTimeStrategyKind,
@@ -41,4 +41,4 @@ export type {
   TauriStoreContract,
   TimeStrategy,
   TimeStrategyKind,
-} from './types';
+} from "./types";

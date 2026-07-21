@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Changelog
-titleTemplate: '@tauri-store/zustand'
+titleTemplate: "@tauri-store/zustand"
 description: Changelog for @tauri-store/zustand
 outline: 2
 ---

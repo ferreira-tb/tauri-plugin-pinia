@@ -1,6 +1,6 @@
-import * as commands from './commands';
-import type { StoreApi } from 'zustand';
-import type { TauriPluginZustandStoreOptions } from './types';
+import * as commands from "./commands";
+import type { StoreApi } from "zustand";
+import type { TauriPluginZustandStoreOptions } from "./types";
 import {
   BaseStore,
   debounce,
@@ -19,7 +19,7 @@ import {
   type TauriStoreContract,
   throttle,
   TimeStrategy,
-} from '@tauri-store/shared';
+} from "@tauri-store/shared";
 
 class TauriStore<S extends State, Store extends StoreApi<S>>
   extends BaseStore<S>
@@ -70,9 +70,9 @@ class TauriStore<S extends State, Store extends StoreApi<S>>
       this.patchBackend(state);
     };
 
-    if (this.syncStrategy === 'debounce') {
+    if (this.syncStrategy === "debounce") {
       patchBackend = debounce(patchBackend, this.syncInterval);
-    } else if (this.syncStrategy === 'throttle') {
+    } else if (this.syncStrategy === "throttle") {
       patchBackend = throttle(patchBackend, this.syncInterval);
     }
 

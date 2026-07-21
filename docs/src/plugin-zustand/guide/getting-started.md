@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Getting started
-titleTemplate: '@tauri-store/zustand'
+titleTemplate: "@tauri-store/zustand"
 description: Getting started
 ---
 
@@ -84,8 +84,8 @@ tauri::Builder::default()
 ::: code-group
 
 ```typescript [src/stores/counter.ts]
-import { create } from 'zustand';
-import { createTauriStore } from '@tauri-store/zustand';
+import { create } from "zustand";
+import { createTauriStore } from "@tauri-store/zustand";
 
 type CounterStore = {
   counter: number;
@@ -100,7 +100,7 @@ export const useCounterStore = create<CounterStore>((set) => ({
 
 // A handle to the Tauri plugin.
 // We will need this to start the store.
-export const tauriHandler = createTauriStore('counter', useCounterStore);
+export const tauriHandler = createTauriStore("counter", useCounterStore);
 ```
 
 :::
@@ -118,7 +118,7 @@ Stores won't be saved nor synchronized until you [start](https://tb.dev.br/tauri
 5. Use the store in your React components:
 
 ```tsx
-import { useCounterStore } from '@/stores/counter';
+import { useCounterStore } from "@/stores/counter";
 
 export default function MyComponent() {
   const counter = useCounterStore((state) => state.counter);

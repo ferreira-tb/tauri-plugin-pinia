@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Getting started
-titleTemplate: '@tauri-store/svelte'
+titleTemplate: "@tauri-store/svelte"
 description: Getting started
 ---
 
@@ -84,9 +84,9 @@ tauri::Builder::default()
 ::: code-group
 
 ```typescript [src/lib/stores/counter.ts]
-import { Store } from '@tauri-store/svelte';
+import { Store } from "@tauri-store/svelte";
 
-export const store = new Store('counter', { counter: 0 });
+export const store = new Store("counter", { counter: 0 });
 ```
 
 :::
@@ -105,7 +105,7 @@ Stores won't be saved nor synchronized until you [start](https://tb.dev.br/tauri
 
 ```svelte
 <script>
-  import { store } from '$lib/stores/counter';
+  import { store } from "$lib/stores/counter";
 </script>
 
 <div>
@@ -123,9 +123,9 @@ You can also use [runes](https://svelte.dev/docs/svelte/what-are-runes) instead 
 ::: code-group
 
 ```typescript [src/lib/counter.svelte.ts]
-import { RuneStore } from '@tauri-store/svelte';
+import { RuneStore } from "@tauri-store/svelte";
 
-const store = new RuneStore('counter', { counter: 0 });
+const store = new RuneStore("counter", { counter: 0 });
 
 function increment() {
   // "state" is reactive!

@@ -1,5 +1,5 @@
-import type { Option } from './types';
-import { debounce as kitDebounce, throttle as kitThrottle } from 'es-toolkit/function';
+import type { Option } from "./types";
+import { debounce as kitDebounce, throttle as kitThrottle } from "es-toolkit/function";
 
 export function debounce<T extends (...args: any) => any>(f: T, wait?: Option<number>): T {
   return kitDebounce(f, wait ?? 0) as unknown as T;
@@ -16,7 +16,7 @@ export function throttle<T extends (...args: any) => any>(f: T, wait?: Option<nu
  */
 export function merge<T extends object>(target: T = {} as T, source: T = {} as T): T {
   for (const [key, value] of Object.entries(source)) {
-    if (typeof (target as Record<string, unknown>)[key] === 'undefined') {
+    if (typeof (target as Record<string, unknown>)[key] === "undefined") {
       Reflect.set(target, key, value);
     }
   }

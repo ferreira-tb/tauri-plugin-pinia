@@ -1,12 +1,12 @@
-import { flatten } from '../utils';
-import { invoke } from '@tauri-apps/api/core';
-import type { Option, State, StoreBackendOptions, StoreBackendRawOptions } from '../types';
+import { flatten } from "../utils";
+import { invoke } from "@tauri-apps/api/core";
+import type { Option, State, StoreBackendOptions, StoreBackendRawOptions } from "../types";
 import {
   isValidInterval,
   TimeStrategy,
   type TimeStrategyKind,
   type TimeStrategyRawTuple,
-} from '../time-strategy';
+} from "../time-strategy";
 
 export function allowSave(plugin: string) {
   return function (...storeId: string[]): Promise<void> {
@@ -118,8 +118,8 @@ export function setAutosave(plugin: string) {
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function setSaveStrategy(plugin: string) {
-  function set(storeId: string, strategy: 'immediate'): Promise<void>;
-  function set(storeId: string, strategy: 'debounce' | 'throttle', interval: number): Promise<void>;
+  function set(storeId: string, strategy: "immediate"): Promise<void>;
+  function set(storeId: string, strategy: "debounce" | "throttle", interval: number): Promise<void>;
   function set(storeId: string, strategy: TimeStrategyKind, interval?: number): Promise<void> {
     const timeStrategy = new TimeStrategy(strategy, interval);
     return invoke(`plugin:${plugin}|set_save_strategy`, {
@@ -140,14 +140,14 @@ export function setStoreCollectionPath(plugin: string) {
 export function setStoreOptions(plugin: string) {
   return function (storeId: string, options: StoreBackendOptions): Promise<void> {
     let saveStrategy: TimeStrategyRawTuple | undefined;
-    if (options.saveStrategy ?? typeof options.saveInterval === 'number') {
+    if (options.saveStrategy ?? typeof options.saveInterval === "number") {
       const timeStrategy = new TimeStrategy(options.saveStrategy, options.saveInterval);
       saveStrategy = timeStrategy.tuple();
     }
 
     const _options: StoreBackendRawOptions = {
-      saveOnChange: typeof options.saveOnChange === 'boolean' ? options.saveOnChange : null,
-      saveOnExit: typeof options.saveOnExit === 'boolean' ? options.saveOnExit : null,
+      saveOnChange: typeof options.saveOnChange === "boolean" ? options.saveOnChange : null,
+      saveOnExit: typeof options.saveOnExit === "boolean" ? options.saveOnExit : null,
       saveStrategy,
     };
 

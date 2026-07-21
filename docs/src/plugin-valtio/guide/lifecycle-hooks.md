@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Lifecycle hooks
-titleTemplate: '@tauri-store/valtio'
+titleTemplate: "@tauri-store/valtio"
 description: Lifecycle hooks
 ---
 
@@ -12,10 +12,10 @@ description: Lifecycle hooks
 JavaScript hooks can be registered using the [StoreHooks](https://tb.dev.br/tauri-store/js-docs/plugin-valtio/interfaces/StoreHooks.html) option.
 
 ```typescript
-import { store } from '@tauri-store/valtio';
+import { store } from "@tauri-store/valtio";
 
 const value = { counter: 0 };
-const counterStore = store('counter', value, {
+const counterStore = store("counter", value, {
   hooks: {
     error: (err) => console.error(err),
     beforeBackendSync: (state) => {
@@ -33,13 +33,13 @@ Registers a hook to be called before a store sends its state to Rust. This can b
 Note that `state` is a [snapshot](https://valtio.dev/docs/api/advanced/snapshot), so it's deeply frozen. If you need to mutate it, you can create a new object using [`deepClone`](https://valtio.dev/docs/how-tos/how-to-reset-state) from `valtio/utils` or [`structuredClone`](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone).
 
 ```typescript
-import { deepClone } from 'valtio/utils';
+import { deepClone } from "valtio/utils";
 
 const hooks: StoreHooks = {
   beforeBackendSync: (state) => {
     const _state = deepClone(state);
     _state.foo = null;
-    _state.nested.bar.baz = 'qux';
+    _state.nested.bar.baz = "qux";
     return _state;
   },
 };

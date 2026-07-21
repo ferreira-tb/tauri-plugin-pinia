@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/no-top-level-side-effects */
-import { ref } from 'vue';
-import { defineStore } from 'pinia';
+import { ref } from "vue";
+import { defineStore } from "pinia";
 
 function store() {
   const counter = ref<number>(0);
@@ -10,7 +10,7 @@ function store() {
   };
 }
 
-export const usePiniaStore = defineStore('playground', store, {
+export const usePiniaStore = defineStore("playground", store, {
   tauri: {
     autoStart: true,
     saveOnExit: true,
@@ -18,7 +18,7 @@ export const usePiniaStore = defineStore('playground', store, {
   },
 });
 
-Object.defineProperty(window, '$piniaStore', {
+Object.defineProperty(window, "$piniaStore", {
   value: usePiniaStore,
   enumerable: true,
   configurable: false,

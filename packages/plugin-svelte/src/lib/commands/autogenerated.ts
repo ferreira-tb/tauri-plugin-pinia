@@ -7,63 +7,63 @@
 // upstream `tauri-store` crate or update the code generation itself.
 // This ensures that all plugins maintain consistent behavior.
 
-import { commands } from '@tauri-store/shared';
+import { commands } from "@tauri-store/shared";
 
 /**
  * Removes one or more stores from the save denylist.
  */
-export const allowSave = commands.allowSave('svelte');
+export const allowSave = commands.allowSave("svelte");
 
 /**
  * Removes one or more stores from the sync denylist.
  */
-export const allowSync = commands.allowSync('svelte');
+export const allowSync = commands.allowSync("svelte");
 
 /**
  * Stops the autosave.
  */
-export const clearAutosave = commands.clearAutosave('svelte');
+export const clearAutosave = commands.clearAutosave("svelte");
 
 /**
  * Adds one or more stores to the save denylist.
  */
-export const denySave = commands.denySave('svelte');
+export const denySave = commands.denySave("svelte");
 
 /**
  * Adds one or more stores to the sync denylist.
  */
-export const denySync = commands.denySync('svelte');
+export const denySync = commands.denySync("svelte");
 
 /**
  * Gets the default save strategy for the stores.
  * It can be overridden on a per-store basis.
  */
-export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy('svelte');
+export const getDefaultSaveStrategy = commands.getDefaultSaveStrategy("svelte");
 
 /**
  * Directory where the stores are saved.
  */
-export const getStoreCollectionPath = commands.getStoreCollectionPath('svelte');
+export const getStoreCollectionPath = commands.getStoreCollectionPath("svelte");
 
 /**
  * Gets the save strategy used by a store.
  **/
-export const getSaveStrategy = commands.getSaveStrategy('svelte');
+export const getSaveStrategy = commands.getSaveStrategy("svelte");
 
 /**
  * Lists all the store ids.
  */
-export const getStoreIds = commands.getStoreIds('svelte');
+export const getStoreIds = commands.getStoreIds("svelte");
 
 /**
  * Path where the store is saved.
  **/
-export const getStorePath = commands.getStorePath('svelte');
+export const getStorePath = commands.getStorePath("svelte");
 
 /**
  * Gets the state of a store.
  */
-export const getStoreState = commands.getStoreState('svelte');
+export const getStoreState = commands.getStoreState("svelte");
 
 /**
  * Saves a store to the disk.
@@ -79,17 +79,17 @@ export const getStoreState = commands.getStoreState('svelte');
  * await save('my-store', 'my-store-2');
  * ```
  **/
-export const save = commands.save('svelte');
+export const save = commands.save("svelte");
 
 /**
  * Saves all the stores to the disk.
  */
-export const saveAll = commands.saveAll('svelte');
+export const saveAll = commands.saveAll("svelte");
 
 /**
  * Saves all the stores to the disk immediately, ignoring the save strategy.
  */
-export const saveAllNow = commands.saveAllNow('svelte');
+export const saveAllNow = commands.saveAllNow("svelte");
 
 /**
  * Saves a store to the disk immediately, ignoring the save strategy.
@@ -105,7 +105,7 @@ export const saveAllNow = commands.saveAllNow('svelte');
  * await saveNow('my-store', 'my-store-2');
  * ```
  */
-export const saveNow = commands.saveNow('svelte');
+export const saveNow = commands.saveNow("svelte");
 
 /**
  * Saves the stores periodically.
@@ -119,7 +119,7 @@ export const saveNow = commands.saveNow('svelte');
  * await setAutosave(5 * 60 * 1000);
  * ```
  */
-export const setAutosave = commands.setAutosave('svelte');
+export const setAutosave = commands.setAutosave("svelte");
 
 /**
  * Sets the save strategy for a store.
@@ -132,7 +132,7 @@ export const setAutosave = commands.setAutosave('svelte');
  * await setSaveStrategy('my-store', 'debounce', 1000);
  * ```
  */
-export const setSaveStrategy = commands.setSaveStrategy('svelte');
+export const setSaveStrategy = commands.setSaveStrategy("svelte");
 
 /**
  * Sets the store options.
@@ -148,20 +148,20 @@ export const setSaveStrategy = commands.setSaveStrategy('svelte');
  * });
  * ```
  */
-export const setStoreOptions = commands.setStoreOptions('svelte');
+export const setStoreOptions = commands.setStoreOptions("svelte");
 
 /////////////////////////
 // INTERNAL COMMANDS
 /////////////////////////
 
 /** @internal */
-export const destroy = commands.destroy('svelte');
+export const destroy = commands.destroy("svelte");
 
 /** @internal */
-export const load = commands.load('svelte');
+export const load = commands.load("svelte");
 
 /** @internal */
-export const patch = commands.patch('svelte');
+export const patch = commands.patch("svelte");
 
 /** @internal */
-export const unload = commands.unload('svelte');
+export const unload = commands.unload("svelte");

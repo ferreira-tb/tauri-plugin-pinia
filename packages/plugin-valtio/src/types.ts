@@ -1,5 +1,5 @@
-import type { Store } from './store';
-import type { State, StoreOptions, TauriStoreContract } from '@tauri-store/shared';
+import type { Store } from "./store";
+import type { State, StoreOptions, TauriStoreContract } from "@tauri-store/shared";
 
 export type {
   LooseTimeStrategyKind,
@@ -16,7 +16,7 @@ export type {
   TauriStoreContract,
   TimeStrategy,
   TimeStrategyKind,
-} from '@tauri-store/shared';
+} from "@tauri-store/shared";
 
 /**
  * Options for the Valtio store.
@@ -36,12 +36,12 @@ export interface StoreBuilderReturn<S extends State> extends TauriStoreContract 
    *
    * @see https://valtio.dev/docs/api/advanced/subscribe
    */
-  subscribe: Store<S>['subscribe'];
+  subscribe: Store<S>["subscribe"];
 
   /**
    * Subscribes to changes in a key of the store.
    *
    * @see https://valtio.dev/docs/api/utils/subscribeKey
    */
-  subscribeKey: Store<S>['subscribeKey'];
+  subscribeKey: Store<S>["subscribeKey"];
 }

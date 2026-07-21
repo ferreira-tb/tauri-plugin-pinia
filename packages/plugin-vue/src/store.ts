@@ -1,5 +1,5 @@
-import * as commands from './commands';
-import type { StoreBackendOptions, StoreRef, TauriPluginVueStoreOptions } from './types';
+import * as commands from "./commands";
+import type { StoreBackendOptions, StoreRef, TauriPluginVueStoreOptions } from "./types";
 import {
   type MaybeRefOrGetter,
   nextTick,
@@ -8,7 +8,7 @@ import {
   toRef,
   watch,
   type WatchOptions,
-} from 'vue';
+} from "vue";
 import {
   BaseStore,
   debounce,
@@ -27,9 +27,9 @@ import {
   type TauriStoreContract,
   throttle,
   TimeStrategy,
-} from '@tauri-store/shared';
+} from "@tauri-store/shared";
 
-const GLOBAL_STORE_ID = 'global';
+const GLOBAL_STORE_ID = "global";
 
 export class Store<S extends State> extends BaseStore<S> {
   public readonly id: string;
@@ -51,7 +51,7 @@ export class Store<S extends State> extends BaseStore<S> {
       deep: options.deep ?? true,
       filterKeys: options.filterKeys ?? DEFAULT_FILTER_KEYS,
       filterKeysStrategy: options.filterKeysStrategy ?? DEFAULT_FILTER_KEYS_STRATEGY,
-      flush: options.flush ?? 'pre',
+      flush: options.flush ?? "pre",
       hooks: merge(options.hooks, DEFAULT_HOOKS as StoreHooks<S>),
       save: options.save ?? DEFAULT_SAVE,
       saveInterval: saveStrategy.interval,
@@ -89,9 +89,9 @@ export class Store<S extends State> extends BaseStore<S> {
       flush: this.options.flush,
     };
 
-    if (this.syncStrategy === 'debounce') {
+    if (this.syncStrategy === "debounce") {
       patchBackend = debounce(patchBackend, this.syncInterval);
-    } else if (this.syncStrategy === 'throttle') {
+    } else if (this.syncStrategy === "throttle") {
       patchBackend = throttle(patchBackend, this.syncInterval);
     }
 

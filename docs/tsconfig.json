@@ -1,7 +1,6 @@
 {
   "include": [".vitepress/**/*", ".vitepress/**/*.vue", "src/**/*", "src/**/*.vue", "types/**/*"],
   "compilerOptions": {
-    "baseUrl": ".",
     "lib": ["esnext", "dom"],
     "module": "esnext",
     "moduleResolution": "bundler",
