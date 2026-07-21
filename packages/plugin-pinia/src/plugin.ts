@@ -46,6 +46,7 @@ export function createPlugin(pluginOptions: TauriPluginPiniaOptions = {}) {
       },
     };
 
+    // See: https://github.com/ferreira-tb/tauri-store/issues/270
     return { $tauri: markRaw($tauri) };
   };
 }
