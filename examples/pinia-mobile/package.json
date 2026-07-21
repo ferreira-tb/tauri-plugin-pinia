@@ -9,7 +9,7 @@
     "vite:build": "vite build"
   },
   "devDependencies": {
-    "@tauri-apps/api": "^2.10.1",
+    "@tauri-apps/api": "^2.11.1",
     "@tauri-store/pinia": "workspace:*",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vueuse/core": "^14.3.0",

@@ -12,6 +12,12 @@ outline: 2
 
 _Nothing yet._
 
+## 2.2.2
+
+### Dependencies
+
+- Update dependencies.
+
 ## 2.2.1
 
 ### Dependencies

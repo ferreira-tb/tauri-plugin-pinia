@@ -1,6 +1,6 @@
 {
   "name": "tauri-store",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Persistent stores for Tauri",
   "type": "module",
   "private": false,
@@ -31,10 +31,10 @@
     "dist"
   ],
   "main": "./dist/index.js",
-  "types": "./dist/src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
     "./*": "./*"
@@ -45,7 +45,7 @@
     "typedoc": "typedoc --plugin typedoc-plugin-mdn-links"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.9.0",
+    "@tauri-apps/api": "^2.11.1",
     "@tauri-store/shared": "workspace:*",
     "alien-signals": "^3.2.1"
   }
