@@ -12,6 +12,12 @@ outline: 2
 
 _Nothing yet._
 
+## 5.0.1
+
+### Bug fixes
+
+- Wrap `$tauri` with `markRaw`.
+
 ## 5.0.0
 
 ### Breaking Changes

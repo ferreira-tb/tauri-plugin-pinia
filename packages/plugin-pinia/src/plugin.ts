@@ -1,3 +1,4 @@
+import { markRaw } from "vue";
 import { Store } from "./store";
 import * as commands from "./commands";
 import type { PiniaPluginContext } from "pinia";
@@ -45,7 +46,7 @@ export function createPlugin(pluginOptions: TauriPluginPiniaOptions = {}) {
       },
     };
 
-    return { $tauri };
+    return { $tauri: markRaw($tauri) };
   };
 }
 
