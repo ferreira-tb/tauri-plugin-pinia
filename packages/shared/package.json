@@ -1,6 +1,6 @@
 {
   "name": "@tauri-store/shared",
-  "version": "0.10.5",
+  "version": "0.10.6",
   "description": "Utilities for Tauri Store",
   "type": "module",
   "private": false,
@@ -31,10 +31,10 @@
     "dist"
   ],
   "main": "./dist/index.js",
-  "types": "./dist/src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
     "./*": "./*"
@@ -45,7 +45,7 @@
     "typedoc": "typedoc --plugin typedoc-plugin-mdn-links"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.8.0",
+    "@tauri-apps/api": "^2.11.1",
     "es-toolkit": "^1.49.0"
   }
 }

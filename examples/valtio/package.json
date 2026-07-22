@@ -9,7 +9,7 @@
     "vite:dev": "vite dev"
   },
   "devDependencies": {
-    "@tauri-apps/api": "^2.10.1",
+    "@tauri-apps/api": "^2.11.1",
     "@tauri-apps/plugin-process": "^2.3.1",
     "@tauri-apps/plugin-shell": "^2.3.5",
     "@tauri-store/valtio": "workspace:*",
@@ -17,6 +17,6 @@
     "@vitejs/plugin-react": "^6.0.3",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "valtio": "^2.3.1"
+    "valtio": "^2.3.2"
   }
 }

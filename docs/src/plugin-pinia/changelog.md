@@ -12,6 +12,12 @@ outline: 2
 
 _Nothing yet._
 
+## 5.0.2
+
+### Dependencies
+
+- Update dependencies.
+
 ## 5.0.1
 
 ### Bug fixes

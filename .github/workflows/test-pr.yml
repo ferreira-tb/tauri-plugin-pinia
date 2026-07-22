@@ -22,4 +22,4 @@ jobs:
 
       - name: Test
         shell: pwsh
-        run: scripts/test.ps1 -Ubuntu
+        run: scripts/test.ps1

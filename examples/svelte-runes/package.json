@@ -13,12 +13,12 @@
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/kit": "^2.70.1",
     "@sveltejs/vite-plugin-svelte": "^7.2.0",
-    "@tauri-apps/api": "^2.10.1",
+    "@tauri-apps/api": "^2.11.1",
     "@tauri-apps/plugin-process": "^2.3.1",
     "@tauri-apps/plugin-shell": "^2.3.5",
     "@tauri-store/svelte": "workspace:*",
     "@tb-dev/utils": "^8.1.0",
-    "svelte": "^5.55.4",
+    "svelte": "^5.56.7",
     "svelte-check": "^4.7.3"
   }
 }

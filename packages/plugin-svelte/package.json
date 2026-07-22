@@ -1,6 +1,6 @@
 {
   "name": "@tauri-store/svelte",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Persistent Svelte stores and runes for Tauri",
   "type": "module",
   "private": false,
@@ -51,9 +51,9 @@
     "typedoc": "typedoc --plugin typedoc-plugin-mdn-links"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.8.0",
+    "@tauri-apps/api": "^2.11.1",
     "@tauri-store/shared": "workspace:*",
-    "svelte": "^5.39.4"
+    "svelte": "^5.56.7"
   },
   "devDependencies": {
     "@sveltejs/kit": "^2.70.1",
