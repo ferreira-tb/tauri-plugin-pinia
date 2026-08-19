@@ -4,7 +4,7 @@
   "description": "Persistent Pinia stores for Tauri",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@11.15.1",
+  "packageManager": "pnpm@11.22.0",
   "homepage": "https://tb.dev.br/tauri-store/plugin-pinia/guide/getting-started",
   "license": "MIT",
   "funding": "https://github.com/sponsors/ferreira-tb",
@@ -50,7 +50,7 @@
   "dependencies": {
     "@tauri-apps/api": "^2.11.1",
     "@tauri-store/shared": "workspace:*",
-    "pinia": "^4.0.2",
-    "vue": "^3.5.40"
+    "pinia": "^4.0.3",
+    "vue": "^3.5.41"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "example-pinia-nuxt",
   "type": "module",
-  "packageManager": "pnpm@11.15.1",
+  "packageManager": "pnpm@11.22.0",
   "private": true,
   "scripts": {
     "nuxt:build": "nuxt build",
@@ -12,17 +12,17 @@
     "sync": "nuxt prepare"
   },
   "devDependencies": {
-    "@pinia/nuxt": "^1.0.1",
+    "@pinia/nuxt": "^1.0.2",
     "@tauri-apps/api": "^2.11.1",
     "@tauri-apps/plugin-process": "^2.3.1",
     "@tauri-apps/plugin-shell": "^2.3.5",
     "@tauri-store/pinia": "workspace:*",
     "@vitejs/plugin-vue": "^6.0.8",
-    "@vueuse/core": "^14.3.0",
-    "nuxt": "^4.5.0",
-    "pinia": "^4.0.2",
-    "vue": "^3.5.40",
+    "@vueuse/core": "^14.4.0",
+    "nuxt": "^4.5.2",
+    "pinia": "^4.0.3",
+    "vue": "^3.5.41",
     "vue-router": "^5.2.0",
-    "vue-tsc": "~3.3.7"
+    "vue-tsc": "~3.3.10"
   }
 }
